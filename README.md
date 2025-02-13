@@ -30,21 +30,29 @@ MLOps/
 │-- test_sent_emo.csv.dvc  # DVC-tracked testdata
 
 # Installation
-1. Klon projektet
+1. Klon projektet:
+   
 git clone https://github.com/boletteeh/MLOps.git
+
 cd MLOps
 
-2. Installer afhængigheder
+2. Installer afhængigheder:
+   
 pip install -r Requirements.txt
 
-3. Download data og modeller med DVC
+3. Download data og modeller med DVC:
+   
 dvc pull
 
 # Versionsstyring med DVC
 Når der er nye modelopdateringer eller dataændringer, kan du tracke dem med:
 
 dvc add best_model.pth sentiment_model.pth train_sent_emo.csv val_sent_emo.csv test_sent_emo.csv
+
 git add *.dvc
+
 git commit -m "Opdateret model og data"
+
 git push origin main
+
 dvc push

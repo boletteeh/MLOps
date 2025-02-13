@@ -1,0 +1,5 @@
+outs:
+- md5: 3a33b022655c68961c440a83c93497ec
+  size: 1119290
+  hash: md5
+  path: train_sent_emo.csv

@@ -1,0 +1,5 @@
+outs:
+- md5: 46c92f610268c703cb1a0472c76925e5
+  size: 294526
+  hash: md5
+  path: test_sent_emo.csv

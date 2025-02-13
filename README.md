@@ -29,6 +29,28 @@ MLOps/
 
 │-- test_sent_emo.csv.dvc  # DVC-tracked testdata
 
+# Hvad er DVC?
+DVC (Data Version Control) bruges til at versionere store filer såsom datasæt og modeller, som ikke skal gemmes direkte i Git. I dette projekt bruges DVC til at tracke:
+
+Trænings-, validerings- og testdata (*.csv.dvc)
+
+Modelfiler (*.pth.dvc)
+
+Når DVC bruges, gemmes kun metadata i Git (*.dvc-filer), mens de faktiske filer ligger i en ekstern storage (f.eks. S3).
+
+For at hente de nyeste versioner af disse filer:
+
+dvc pull
+
+For at uploade opdaterede filer:
+
+dvc push
+
+# Hvad er .gitignore?
+.gitignore er en fil, der fortæller Git, hvilke filer der skal ignoreres. Dette er vigtigt, fordi vi ikke ønsker at versionere store filer som modeller og dataset direkte i Git.
+
+
+
 # Installation
 1. Klon projektet:
    

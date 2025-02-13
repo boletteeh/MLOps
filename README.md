@@ -32,17 +32,17 @@ MLOps/
 # Hvad er DVC?
 DVC (Data Version Control) bruges til at versionere store filer såsom datasæt og modeller, som ikke skal gemmes direkte i Git. I dette projekt bruges DVC til at tracke:
 
-Trænings-, validerings- og testdata (*.csv.dvc)
+- Trænings-, validerings- og testdata (*.csv.dvc)
 
-Modelfiler (*.pth.dvc)
+- Modelfiler (*.pth.dvc)
 
 Når DVC bruges, gemmes kun metadata i Git (*.dvc-filer), mens de faktiske filer ligger i en ekstern storage (f.eks. S3).
 
-For at hente de nyeste versioner af disse filer:
+- For at hente de nyeste versioner af disse filer:
 
 dvc pull
 
-For at uploade opdaterede filer:
+- For at uploade opdaterede filer:
 
 dvc push
 

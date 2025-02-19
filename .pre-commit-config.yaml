@@ -9,3 +9,4 @@ repos:
       - id: check-yaml           # Validerer YAML-filer
       - id: check-json           # Validerer JSON-filer
       - id: check-added-large-files  # Advarer, hvis du committer store filer
+

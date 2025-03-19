@@ -24,13 +24,13 @@ def test_model_initialization(model):
 
 # Test forward-metoden
 def test_model_forward(model):
-    sample_input = torch.randint(0, VOCAB_SIZE, (2, MAX_LEN))  # Simulerer batch med 2 sekvenser
+    sample_input = torch.randint(0, VOCAB_SIZE, (2, MAX_LEN), dtype=torch.long) # Simulerer batch med 2 sekvenser
     output = model(sample_input)
     assert output.shape == (2, OUTPUT_DIM), "Modelens output har forkert form"
 
 # Test om modellen kan lave en fremadpassage uden fejl
 def test_model_forward_pass_no_error(model):
-    sample_input = torch.randint(0, VOCAB_SIZE, (4, MAX_LEN))
+    sample_input = torch.randint(0, VOCAB_SIZE, (4, MAX_LEN), dtype=torch.long)
     try:
         output = model(sample_input)
     except Exception as e:

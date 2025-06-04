@@ -135,6 +135,8 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, epochs, d
         val_loss = 0.0
         with torch.no_grad():
             for inputs, labels in val_loader:
+                inputs = inputs.to(device)
+                labels = labels.to(device)
                 outputs = model(inputs)
                 loss = criterion(outputs, labels)
                 val_loss += loss.item()

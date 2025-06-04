@@ -17,5 +17,9 @@ module load cuda/12.1
 # Aktivér dit virtuelle miljø, hvis du bruger det
 # source ~/venv/bin/activate
 
+# Hent data via DVS først
+dvs checkout train_sent_emo.csv
+dvs checkout val_sent_emo.csv
+
 # Kør træningsscriptet med torchrun (DDP)
 torchrun --nproc_per_node=2 train_ddp.py

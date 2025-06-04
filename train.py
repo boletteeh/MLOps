@@ -123,6 +123,7 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, epochs,
         avg_loss = running_loss / len(train_loader)
         train_losses.append(avg_loss)
         print(f"Epoch [{epoch+1}/{epochs}], Train Loss: {avg_loss:.4f}")
+        wandb.log({"train_loss": avg_loss, "epoch": epoch+1})
 
         # Validering
         model.eval()
@@ -134,6 +135,7 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, epochs,
                 val_loss += loss.item()
         avg_val_loss = val_loss / len(val_loader)
         print(f"Epoch [{epoch+1}/{epochs}], Validation Loss: {avg_val_loss:.4f}")
+        wandb.log({"val_loss": avg_val_loss, "epoch": epoch+1})
 
         # Gem modelcheckpoint, hvis valideringstab er forbedret
         if avg_val_loss < best_val_loss:
@@ -141,10 +143,10 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, epochs,
             print(f"Best model saved with Validation Loss: {best_val_loss:.4f}")
  
         # W&B artifact logning
-        torch.save(model.state_dict(), checkpoint_path)
-        artifact = wandb.Artifact(name="sentiment_model", type="model")
-        artifact.add_file(checkpoint_path)
-        run.log_artifact(artifact, aliases=["best", f"epoch-{epoch+1}"])
-        wandb.finish()
+            torch.save(model.state_dict(), checkpoint_path)
+            artifact = wandb.Artifact(name="sentiment_model", type="model")
+            artifact.add_file(checkpoint_path)
+            run.log_artifact(artifact, aliases=["best", f"epoch-{epoch+1}"])
+    wandb.finish()
 
     return train_losses

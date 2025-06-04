@@ -108,7 +108,7 @@ class SentimentModel(nn.Module):
 
 ## TRÆNING OG EVALUERING ##
 
-def train_model(model, train_loader, val_loader, criterion, optimizer, epochs,
+def train_model(model, train_loader, val_loader, criterion, optimizer, epochs, device,
                 checkpoint_path="best_model.pth"):
     best_val_loss = float('inf')
     train_losses = []

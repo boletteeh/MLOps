@@ -6,6 +6,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
 import matplotlib.pyplot as plt
+import wandb
 
 
 ## DATAHÅNDTERING ##
@@ -108,6 +109,7 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, epochs,
                 checkpoint_path="best_model.pth"):
     best_val_loss = float('inf')
     train_losses = []
+    run = wandb.init(project="MLOps", job_type="train", reinit=True)                
     for epoch in range(epochs):
         model.train()
         running_loss = 0.0
@@ -136,15 +138,13 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, epochs,
         # Gem modelcheckpoint, hvis valideringstab er forbedret
         if avg_val_loss < best_val_loss:
             best_val_loss = avg_val_loss
-            torch.save(model.state_dict(), checkpoint_path)
             print(f"Best model saved with Validation Loss: {best_val_loss:.4f}")
-
-                    # W&B artifact logning
  
-            run = wandb.init(project="MLOps", job_type="train", reinit=True)
-            artifact = wandb.Artifact(name="sentiment_model", type="model")
-            artifact.add_file(checkpoint_path)
-            run.log_artifact(artifact, aliases=["best", f"epoch-{epoch+1}"])
-            run.finish()
+        # W&B artifact logning
+        torch.save(model.state_dict(), checkpoint_path)
+        artifact = wandb.Artifact(name="sentiment_model", type="model")
+        artifact.add_file(checkpoint_path)
+        run.log_artifact(artifact, aliases=["best", f"epoch-{epoch+1}"])
+        wandb.finish()
 
     return train_losses

@@ -2,7 +2,7 @@
 #SBATCH --job-name=ddp_train          # Navn på jobbet
 #SBATCH --output=output_%j.log        # Logfil (j = job id)
 #SBATCH --error=error_%j.log          # Fejllog
-#SBATCH --partition=gpu               # Partition (typisk gpu for GPU-job)
+#SBATCH --partition=l4               # Partition (typisk gpu for GPU-job)
 #SBATCH --gres=gpu:2                  # Antal GPU'er du ønsker (fx 2)
 #SBATCH --ntasks=2                    # Antal opgaver/processor kerner
 #SBATCH --time=02:00:00               # Maks køretid (timer:minutter:sekunder)

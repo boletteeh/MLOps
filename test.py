@@ -12,6 +12,9 @@ def evaluate_model(model, loader, criterion):
     preds, labels = [], []
     with torch.no_grad():
         for inputs, targets in loader:
+            inputs = inputs.to(device)
+            targets = targets.to(device)
+            
             outputs = model(inputs)
             _, predicted = torch.max(outputs, 1)
             total_correct += (predicted == targets).sum().item()

@@ -150,3 +150,40 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, epochs,
     wandb.finish()
 
     return train_losses
+
+if __name__ == "__main__":
+    # Eksempel på lokal kørsel af træning, hvis du vil teste uden DDP
+    train_data, val_data, _ = load_datasets()
+    train_data = preprocess_dataset(train_data)
+    val_data = preprocess_dataset(val_data)
+
+    word2idx = build_word2idx()
+    train_data = index_dataset(train_data, word2idx)
+    val_data = index_dataset(val_data, word2idx)
+
+    max_len = 120
+    train_data = pad_dataset(train_data, max_len)
+    val_data = pad_dataset(val_data, max_len)
+
+    X_train, y_train = convert_to_tensors(train_data)
+    X_val, y_val = convert_to_tensors(val_data)
+
+    train_dataset = TensorDataset(X_train, y_train)
+    val_dataset = TensorDataset(X_val, y_val)
+
+    train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
+
+    model = SentimentModel(
+        vocab_size=len(word2idx),
+        embedding_dim=50,
+        hidden_dim=64,
+        output_dim=7,
+        max_len=max_len
+    )
+
+    criterion = nn.CrossEntropyLoss()
+    optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
+
+    train_model(model, train_loader, val_loader, criterion, optimizer, epochs=10)
+

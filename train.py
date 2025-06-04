@@ -7,6 +7,8 @@ import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
 import matplotlib.pyplot as plt
 import wandb
+nltk.download('punkt')
+
 
 
 ## DATAHÅNDTERING ##

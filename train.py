@@ -139,4 +139,12 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, epochs,
             torch.save(model.state_dict(), checkpoint_path)
             print(f"Best model saved with Validation Loss: {best_val_loss:.4f}")
 
+                    # W&B artifact logning
+ 
+            run = wandb.init(project="MLOps", job_type="train", reinit=True)
+            artifact = wandb.Artifact(name="sentiment_model", type="model")
+            artifact.add_file(checkpoint_path)
+            run.log_artifact(artifact, aliases=["best", f"epoch-{epoch+1}"])
+            run.finish()
+
     return train_losses

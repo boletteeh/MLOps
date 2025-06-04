@@ -91,7 +91,7 @@ class SentimentModel(nn.Module):
         self.relu3 = nn.ReLU()
         self.conv4 = nn.Conv1d(128, 128, 5, padding=1)
         self.relu4 = nn.ReLU()
-        self.fc_out = nn.Linear(3840, output_dim)
+        self.fc_out = nn.Linear(7168, output_dim)
 
     def forward(self, x):
         x = self.embedding(x)

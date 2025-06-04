@@ -1,5 +1,5 @@
 import torch
-from train.py import SentimentModel, load_datasets, preprocess_dataset, build_word2idx, index_dataset, pad_dataset, convert_to_tensors
+from train import SentimentModel, load_datasets, preprocess_dataset, build_word2idx, index_dataset, pad_dataset, convert_to_tensors
 
 # Samme parametre som under træning
 EMBEDDING_DIM = 50

@@ -8,12 +8,14 @@
 #SBATCH --time=02:00:00               # Maks køretid (timer:minutter:sekunder)
 #SBATCH --mem=16G                    # Hukommelse
 
+soruce /ect/profile
+
 # Load miljø, fx python og CUDA (afhængigt af HPC setup)
 module load python/3.10
 module load cuda/12.1
 
 # Aktivér dit virtuelle miljø, hvis du bruger det
-source ~/venv/bin/activate
+# source ~/venv/bin/activate
 
 # Kør træningsscriptet med torchrun (DDP)
 torchrun --nproc_per_node=2 train_ddp.py

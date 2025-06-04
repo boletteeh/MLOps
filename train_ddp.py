@@ -89,8 +89,8 @@ def ddp_train(rank, world_size, epochs=10, batch_size=32):
         criterion=criterion,
         optimizer=optimizer,
         epochs=epochs,
-        checkpoint_path=f"best_model_rank{rank}.pth"
-        device=device
+        checkpoint_path=f"best_model_rank{rank}.pth",
+        device=rank
     )
 
     if rank == 0:

@@ -1,4 +1,5 @@
 import pandas as pd
+import wandb
 from nltk.tokenize import word_tokenize
 import re
 from collections import defaultdict
@@ -7,6 +8,7 @@ import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
 import matplotlib.pyplot as plt
 
+wandb.init()
 
 ## DATAHÅNDTERING ##
 

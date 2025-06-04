@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import torch.nn as nn
 from train import load_datasets, inspect_dataset, SentimentModel, preprocess_text, preprocess_dataset, build_word2idx, index_dataset, pad_sequence, pad_dataset, convert_to_tensors, train_model
 
-def evaluate_model(model, loader, criterion):
+def evaluate_model(model, loader, criterion, device):
     model.eval()
     total_correct = 0
     preds, labels = [], []
@@ -67,14 +67,14 @@ def main():
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
     # Train model
-    train_losses = train_model(model, train_loader, val_loader, criterion, optimizer, epochs=15)
+    train_losses = train_model(model, train_loader, val_loader, criterion, optimizer, epochs=15, device=device)
 
     # Load the best model
     model.load_state_dict(torch.load("best_model.pth"))
 
     # Evaluate on validation and test data
-    val_acc, val_f1, _, _ = evaluate_model(model, val_loader, criterion)
-    test_acc, test_f1, test_preds, test_labels = evaluate_model(model, test_loader, criterion)
+    val_acc, val_f1, _, _ = evaluate_model(model, val_loader, criterion, device)
+    test_acc, test_f1, test_preds, test_labels = evaluate_model(model, test_loader, criterion, device)
 
     print(f"Validation Accuracy: {val_acc * 100:.2f}%, F1-Score: {val_f1:.4f}")
     print(f"Test Accuracy: {test_acc * 100:.2f}%, F1-Score: {test_f1:.4f}")

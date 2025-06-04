@@ -28,6 +28,7 @@ def evaluate_model(model, loader, criterion):
 ## MAIN-FUNKTION ##
 
 def main():
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     # Load datasets
     train_data, val_data, test_data = load_datasets()
     inspect_dataset(train_data)

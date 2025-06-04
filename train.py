@@ -1,4 +1,5 @@
 import pandas as pd
+import wandb
 from nltk.tokenize import word_tokenize
 import re
 from collections import defaultdict
@@ -7,6 +8,7 @@ import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
 import matplotlib.pyplot as plt
 
+wandb.init()
 
 ## DATAHÅNDTERING ##
 
@@ -37,14 +39,20 @@ def preprocess_dataset(dataset):
 
 ## ORDINDEKSERING ##
 
-def build_word2idx():
-    word2idx = defaultdict(lambda: len(word2idx))
-    word2idx['<PAD>'] = 0
-    word2idx['<UNK>'] = 1
+def build_word2idx(dataset):
+    word2idx = {'<PAD>': 0, '<UNK>': 1}  # Start med special tokens
+    index = 2  # Startindeks for egentlige ord
+
+    for tokens in dataset['tokens']:  # Antager at dataset['tokens'] allerede er tokenized tekst
+        for token in tokens:
+            if token not in word2idx:
+                word2idx[token] = index
+                index += 1
+
     return word2idx
 
 def tokens_to_indices(tokens, word2idx):
-    return [word2idx[token] for token in tokens]
+    return [word2idx.get(token, word2idx['<UNK>']) for token in tokens]
 
 def index_dataset(dataset, word2idx):
     dataset['indices'] = dataset['tokens'].apply(lambda tokens: tokens_to_indices(tokens, word2idx))
@@ -98,6 +106,7 @@ class SentimentModel(nn.Module):
         x = self.relu3(self.conv3(x))
         x = self.relu4(self.conv4(x))
         x = x.flatten(start_dim=1)
+        print(x.shape)
         x = self.fc_out(x)
         return x
 

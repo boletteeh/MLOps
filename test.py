@@ -1,4 +1,5 @@
 import pandas as pd
+import wandb
 import torch
 from torch.utils.data import DataLoader, TensorDataset
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, f1_score
@@ -66,7 +67,15 @@ def main():
     train_losses = train_model(model, train_loader, val_loader, criterion, optimizer, epochs=15)
 
     # Load the best model
-    model.load_state_dict(torch.load("best_model.pth"))
+    #model.load_state_dict(torch.load("best_model.pth"))
+    run = wandb.init(project="MLOps", job_type="evaluate")
+
+    artifact = run.use_artifact("sentiment_model:latest", type="model")
+    artifact_dir = artifact.download()
+    model_path = f"{artifact_dir}/best_model.pth"
+
+    model.load_state_dict(torch.load(model_path))
+    run.finish()
 
     # Evaluate on validation and test data
     val_acc, val_f1, _, _ = evaluate_model(model, val_loader, criterion)

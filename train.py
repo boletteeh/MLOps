@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 import wandb
 import nltk
 nltk.download('punkt')
+from torch.cuda.amp import autocast, GradScaler
 
 
 
@@ -108,23 +109,39 @@ class SentimentModel(nn.Module):
 
 ## TRÆNING OG EVALUERING ##
 
-def train_model(model, train_loader, val_loader, criterion, optimizer, epochs, device,
-                checkpoint_path="best_model.pth"):
+def train_model(model, train_loader, val_loader, criterion, optimizer, epochs, device='cuda', checkpoint_path="best_model.pth"):
+    model.to(device)
+    scaler = GradScaler()
     best_val_loss = float('inf')
     train_losses = []
-    run = wandb.init(project="MLOps", job_type="train", reinit=True)                
+    
+    run = wandb.init(project="MLOps", job_type="train", reinit=True)   
+    
     for epoch in range(epochs):
         model.train()
         running_loss = 0.0
+        
         for inputs, labels in train_loader:
             input = inputs.to(device)
             labels = labels.to(device)
+            
             optimizer.zero_grad()
-            outputs = model(inputs)
-            loss = criterion(outputs, labels)
-            loss.backward()
-            optimizer.step()
+            
+            with autocast():  # Her bruges AMP
+                outputs = model(inputs)
+                loss = criterion(outputs, labels)
+                
+            # Backward Pass with AMP
+            scaler.scale(loss).backward()
+            scaler.step(optimizer)
+            scaler.update()
+            
+           #outputs = model(inputs)
+            #loss = criterion(outputs, labels)
+            #loss.backward()
+            #optimizer.step()
             running_loss += loss.item()
+            
         avg_loss = running_loss / len(train_loader)
         train_losses.append(avg_loss)
         print(f"Epoch [{epoch+1}/{epochs}], Train Loss: {avg_loss:.4f}")

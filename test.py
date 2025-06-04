@@ -61,8 +61,8 @@ def main():
     test_loader = DataLoader(TensorDataset(X_test, y_test), batch_size=32, shuffle=False)
 
     # Initialize model, loss, and optimizer
-    model = SentimentModel(len(word2idx), 50, 50, 7, MAX_LEN)
-    class_weights = torch.tensor([1.0, 3.0, 3.0, 1.0, 1.0, 1.5, 1.0], dtype=torch.float)
+    model = SentimentModel(len(word2idx), 50, 50, 7, MAX_LEN).to(device)
+    class_weights = torch.tensor([1.0, 3.0, 3.0, 1.0, 1.0, 1.5, 1.0], dtype=torch.float).to(device)
     criterion = nn.CrossEntropyLoss(weight=class_weights)
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 

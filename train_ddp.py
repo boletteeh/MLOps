@@ -6,6 +6,12 @@ from torch.utils.data import DataLoader, DistributedSampler, TensorDataset
 from torch.nn.parallel import DistributedDataParallel as DDP
 import wandb
 
+def print_rank(msg):
+    if dist.is_initialized():
+        print(f"[Rank {dist.get_rank()}] {msg}")
+    else:
+        print(f"[No DDP] {msg}")
+
 # Importér alle nødvendige funktioner og klasser fra dit eget script
 from train import (
     load_datasets, preprocess_dataset, build_word2idx, index_dataset,
@@ -23,6 +29,8 @@ def cleanup():
 
 def ddp_train(rank, world_size, epochs=10, batch_size=32):
     setup(rank, world_size)
+
+    print_rank("DDP er initialiseret og træningen starter.")
 
     # Datahåndtering og preprocessing (ens på alle ranks)
     train_data, val_data, _ = load_datasets()

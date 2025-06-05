@@ -2,7 +2,7 @@ import time
 import torch
 import yaml
 from torch.quantization import quantize_dynamic
-from train import SentimentModel, load_datasets, preprocess_dataset, build_word2idx, index_dataset, pad_dataset, convert_to_tensors, evaluate_model
+from train import SentimentModel, load_datasets, preprocess_dataset, build_word2idx_from_tokens, index_dataset, pad_dataset, convert_to_tensors, evaluate_model
 import nltk
 nltk.download('punkt')
 

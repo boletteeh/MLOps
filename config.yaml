@@ -9,7 +9,7 @@ model:
   embedding_dim: 50
   hidden_dim: 50
   output_dim: 7
-  vocab_size: 9321  # <-- Sæt den rigtige værdi her
+  vocab_size: 5931
 
 training:
   epochs: 15

@@ -1,6 +1,8 @@
 import torch
 from torch.quantization import quantize_dynamic
 from train import SentimentModel  # importer din modelklasse
+import nltk
+nltk.download('punkt')
 
 # Indlæs trænet model
 model = SentimentModel()

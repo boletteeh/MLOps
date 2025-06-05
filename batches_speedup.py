@@ -20,7 +20,7 @@ model = SentimentModel(
 
 # Load quantized model state_dict (hvis du har gemt state_dict)
 # Hvis du har gemt hele modellen, brug i stedet model = torch.load(...)
-model.torch.load("quantized_model.pth")
+model = torch.load("quantized_model.pth")
 model.eval()
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

@@ -23,7 +23,8 @@ config = {
     "model": {
         "embedding_dim": 50,
         "hidden_dim": 50,
-        "output_dim": 7
+        "output_dim": 7,
+        "vocab_size": len(word2idx)
     },
     "training": {
         "epochs": 15,

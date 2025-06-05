@@ -1,6 +1,7 @@
 import torch
 from torch.quantization import quantize_dynamic
 from train import SentimentModel  # importer din modelklasse
+import nltk
 from nltk.tokenize import word_tokenize
 nltk.download('punkt')
 

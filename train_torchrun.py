@@ -12,8 +12,9 @@ from train import (
 )
 
 def setup():
-    dist.init_process_group(backend="nccl")
-    torch.cuda.set_device(int(os.environ["LOCAL_RANK"]))
+    dist.init_process_group(backend="nccl", init_method="env://")
+    local_rank = int(os.environ["LOCAL_RANK"])
+    torch.cuda.set_device(local_rank)
 
 def cleanup():
     dist.destroy_process_group()
@@ -22,7 +23,8 @@ def main():
     setup()
     rank = dist.get_rank()
     world_size = dist.get_world_size()
-    device = torch.device("cuda", int(os.environ["LOCAL_RANK"]))
+    local_rank = int(os.environ["LOCAL_RANK"])
+    device = torch.device("cuda", local_rank)
 
     # Dataforberedelse
     train_data, val_data, _ = load_datasets()
@@ -58,7 +60,7 @@ def main():
         max_len=max_len
     ).to(device)
 
-    model = DDP(model, device_ids=[device])
+    model = DDP(model, device_ids=[local_rank])
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
 
@@ -83,3 +85,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

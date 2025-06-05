@@ -16,9 +16,10 @@ model = SentimentModel(
     max_len=config["data"]["max_len"]
 )
 
-# Load quantized weights (for kvantiseret model skal du passe på at indlæse korrekt)
-model.load_state_dict(torch.load("quantized_model.pth"))
+# Load quantized model 
+model = torch.load("quantized_model.pth")
 model.eval()
+
 
 # Load and preprocess test data
 _, _, test_data = load_datasets()

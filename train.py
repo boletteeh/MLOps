@@ -41,20 +41,23 @@ def preprocess_dataset(dataset):
 
 ## ORDINDEKSERING ##
 
-def build_word2idx():
-    word2idx = defaultdict(lambda: len(word2idx))
-    word2idx['<PAD>'] = 0
-    word2idx['<UNK>'] = 1
+def build_word2idx_from_tokens(token_lists):
+    word2idx = {'<PAD>': 0, '<UNK>': 1}
+    idx = 2
+    for tokens in token_lists:
+        for token in tokens:
+            if token not in word2idx:
+                word2idx[token] = idx
+                idx += 1
     return word2idx
 
 def tokens_to_indices(tokens, word2idx):
-    return [word2idx[token] for token in tokens]
+    return [word2idx.get(token, word2idx['<UNK>']) for token in tokens]
 
 def index_dataset(dataset, word2idx):
     dataset['indices'] = dataset['tokens'].apply(lambda tokens: tokens_to_indices(tokens, word2idx))
     return dataset
-
-
+    
 ## PADDING OG TRIMMING ##
 
 def pad_sequence(seq, max_len, pad_value=0):

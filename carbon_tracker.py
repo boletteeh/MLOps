@@ -16,7 +16,6 @@ def main():
     tracker_train.epoch_end()
     tracker_train.stop()
 
-    training_emission = tracker_train._emissions_tracker._total_emissions
     print(f"\n📊 Total CO2 for træning + test: {training_emission:.4f} kg CO2e")
 
     # ---------- Måling af én inferens ----------

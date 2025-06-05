@@ -36,6 +36,7 @@ def main():
 
     # Build word2idx and index datasets
     word2idx = build_word2idx_from_tokens(train_data['tokens'])
+    print(f"Vocabulary size: {len(word2idx)}")
     train_data = index_dataset(train_data, word2idx)
     val_data = index_dataset(val_data, word2idx)
     test_data = index_dataset(test_data, word2idx)

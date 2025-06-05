@@ -1,6 +1,6 @@
 import torch
 from torch.utils.data import DataLoader, TensorDataset
-from train import SentimentModel, preprocess_dataset, build_word2idx_from_tokens, index_dataset, pad_dataset, convert_to_tensors
+from train import SentimentModel, preprocess_dataset, load_datasets, build_word2idx_from_tokens, index_dataset, pad_dataset, convert_to_tensors
 import yaml
 
 # Load config

@@ -27,7 +27,7 @@ model.eval()
 # Load and preprocess test data
 _, _, test_data = load_datasets()
 test_data = preprocess_dataset(test_data)
-word2idx = build_word2idx()
+word2idx = build_word2idx_from_tokens()
 test_data = index_dataset(test_data, word2idx)
 test_data = pad_dataset(test_data, config["data"]["max_len"])
 X_test, y_test = convert_to_tensors(test_data)

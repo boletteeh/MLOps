@@ -23,7 +23,7 @@ model = SentimentModel(
 model = torch.load("quantized_model.pth")
 model.eval()
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cpu")
 model.to(device)
 
 # Load and preprocess test data

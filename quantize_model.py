@@ -80,5 +80,6 @@ quantized_time = measure_inference_time(quantized_model, test_loader)
 
 print(f"Quantized model - Accuracy: {quantized_acc:.4f}, F1: {quantized_f1:.4f}, Inference time: {quantized_time:.2f} s")
 
-# Save quantized model
-torch.save(quantized_model.state_dict(), "quantized_model.pth")
+# Gem hele modellen
+torch.save(quantized_model, "quantized_model.pth")
+

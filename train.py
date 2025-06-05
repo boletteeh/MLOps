@@ -1,4 +1,5 @@
 import pandas as pd
+import nltk
 from nltk.tokenize import word_tokenize
 import re
 from collections import defaultdict

@@ -38,9 +38,9 @@ dataloader = DataLoader(subset, batch_size=64, shuffle=True)
 
 # === 4. Gradient ascent ===
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.SGD(model.parameters(), lr=1e-5)
+optimizer = optim.SGD(model.parameters(), lr=1e-4)
 
-epochs = 5
+epochs = 20
 for epoch in range(epochs):
     running_loss = 0.0
     for images, labels in dataloader:

@@ -5,14 +5,21 @@ from torch.utils.data import DataLoader, Subset
 import numpy as np
 
 # === 1. Definer modelarkitektur der matcher din gemte model ===
-model = nn.Sequential(
-    nn.Flatten(),
-    nn.Linear(28 * 28, 128),
-    nn.ReLU(),
-    nn.Linear(128, 64),
-    nn.ReLU(),
-    nn.Linear(64, 10)
-)
+# Modelarkitektur
+class Classifier(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.model = nn.Sequential(
+            nn.Flatten(),
+            nn.Linear(28 * 28, 256),
+            nn.ReLU(),
+            nn.Linear(256, 128),
+            nn.ReLU(),
+            nn.Linear(128, 10)  # 10 output classes
+        )
+
+    def forward(self, x):
+        return self.model(x)
 
 # === 2. Initialiser og load weights ===
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

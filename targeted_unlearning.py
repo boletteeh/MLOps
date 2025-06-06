@@ -38,7 +38,7 @@ dataloader = DataLoader(subset, batch_size=64, shuffle=True)
 
 # === 4. Gradient ascent ===
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.SGD(model.parameters(), lr=0.01)
+optimizer = optim.SGD(model.parameters(), lr=1e-4)
 
 epochs = 5
 for epoch in range(epochs):

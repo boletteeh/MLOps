@@ -18,7 +18,7 @@ def detect_drift_ks(original_file, drifted_file, text_col="Utterance"):
     print(f"\n📈 KS-statistik: {ks_stat:.4f}")
     print(f"📉 p-værdi: {p_value:.4f}")
 
-    if p_value < 0.019:
+    if p_value < 0.09:
         print("\n🚨 DRIFT DETEKTERET: Fordelingerne er signifikant forskellige.")
     else:
         print("\n✅ Ingen signifikant drift fundet i tekstlængde.")

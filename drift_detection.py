@@ -53,7 +53,7 @@ def apply_noise(text):
 
 # ---- Hovedprogram ---- #
 
-def inject_drift(input_file="test_sent_emo.csv.dvc", output_file="test_drifted.csv", text_col="Utterance", drift_frac=0.2):
+def inject_drift(input_file="test_sent_emo.csv", output_file="test_drifted.csv", text_col="Utterance", drift_frac=0.2):
     if not os.path.exists(input_file):
         print(f"❌ Filen '{input_file}' blev ikke fundet.")
         return

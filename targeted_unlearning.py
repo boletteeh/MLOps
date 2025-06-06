@@ -96,7 +96,12 @@ def evaluate_forgetting(model, dataloader, forget_class=7):
     return acc_forget, acc_others
 
 # --- Kør evaluering ---
-acc_forget, acc_others = evaluate_forgetting(model, dataloader, forget_class=7)
+# === Tilføj test_loader til evaluering ===
+test_dataset = datasets.MNIST(root='./data', train=False, download=True, transform=transform)
+test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
+
+# Evaluer på testdata (indeholder både klasse 7 og alle andre)
+acc_forget, acc_others = evaluate_forgetting(model, test_loader, forget_class=7)
 
 print(f"Accuracy på aflærte klasse 7: {acc_forget*100:.2f}%")
 print(f"Accuracy på øvrige klasser: {acc_others*100:.2f}%")

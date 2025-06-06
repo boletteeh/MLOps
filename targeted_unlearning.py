@@ -96,7 +96,7 @@ def evaluate_forgetting(model, dataloader, forget_class=7):
     return acc_forget, acc_others
 
 # --- Kør evaluering ---
-acc_forget, acc_others = evaluate_forgetting(model, data_loader, forget_class=7)
+acc_forget, acc_others = evaluate_forgetting(model, dataloader, forget_class=7)
 
 print(f"Accuracy på aflærte klasse 7: {acc_forget*100:.2f}%")
 print(f"Accuracy på øvrige klasser: {acc_others*100:.2f}%")

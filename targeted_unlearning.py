@@ -4,38 +4,32 @@ from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, Subset
 import numpy as np
 
-# === 1. Definer modelarkitektur ===
-class SimpleMLP(nn.Module):
-    def __init__(self):
-        super(SimpleMLP, self).__init__()
-        self.flatten = nn.Flatten()
-        self.fc1 = nn.Linear(28 * 28, 256)
-        self.relu = nn.ReLU()
-        self.fc2 = nn.Linear(256, 10)
+# === 1. Definer modelarkitektur der matcher din gemte model ===
+model = nn.Sequential(
+    nn.Flatten(),
+    nn.Linear(28 * 28, 128),
+    nn.ReLU(),
+    nn.Linear(128, 64),
+    nn.ReLU(),
+    nn.Linear(64, 10)
+)
 
-    def forward(self, x):
-        x = self.flatten(x)
-        x = self.fc1(x)
-        x = self.relu(x)
-        x = self.fc2(x)
-        return x
-
-# === 2. Initialiser model og load weights ===
+# === 2. Initialiser og load weights ===
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = SimpleMLP().to(device)
+model = model.to(device)
 model.load_state_dict(torch.load("mnist_trained_model.pth"))
 model.train()
 
-# === 3. Hent kun samples med klassen der skal aflæres ===
+# === 3. Hent kun samples med den klasse der skal aflæres ===
 transform = transforms.ToTensor()
 train_dataset = datasets.MNIST(root="./data", train=True, download=True, transform=transform)
 
-target_class = 7  # Den klasse vi vil "unlearn"
+target_class = 7
 indices = [i for i, (x, y) in enumerate(train_dataset) if y == target_class]
 subset = Subset(train_dataset, indices)
 dataloader = DataLoader(subset, batch_size=64, shuffle=True)
 
-# === 4. Unlearning med gradient ascent ===
+# === 4. Gradient ascent ===
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(model.parameters(), lr=0.01)
 
@@ -45,19 +39,17 @@ for epoch in range(epochs):
     for images, labels in dataloader:
         images, labels = images.to(device), labels.to(device)
 
-        # Fremad
         outputs = model(images)
         loss = criterion(outputs, labels)
 
-        # Baglæns (men negativt!)
         optimizer.zero_grad()
-        (-loss).backward()  # Gradient ascent!
+        (-loss).backward()  # gradient ascent
         optimizer.step()
 
         running_loss += loss.item()
 
     print(f"Epoch {epoch+1}/{epochs}, Loss: {running_loss/len(dataloader):.4f}")
 
-# === 5. Gem den "aflærte" model ===
+# === 5. Gem den aflærte model ===
 torch.save(model.state_dict(), "mnist_model_unlearned_7.pth")
-print("Unlearning færdig – model gemt som 'mnist_model_unlearned_7.pth'")
+print("✅ Unlearning færdig – model gemt som 'mnist_model_unlearned_7.pth'")

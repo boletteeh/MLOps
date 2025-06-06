@@ -23,7 +23,7 @@ class Classifier(nn.Module):
 
 # === 2. Initialiser og load weights ===
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = model.to(device)
+model = Classifier().to(device)
 model.load_state_dict(torch.load("mnist_trained_model.pth"))
 model.train()
 

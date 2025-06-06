@@ -1,6 +1,7 @@
 # inference.py
 
 import torch
+import pickle
 import pandas as pd
 from train import (
     SentimentModel,
@@ -18,7 +19,7 @@ def run_single_inference():
     tokens = preprocess_text(sample_text)
 
     # Byg ord-til-indeks mapping baseret på testdata
-     with open("word2idx.pkl", "rb") as f:
+    with open("word2idx.pkl", "rb") as f:
         word2idx = pickle.load(f)
     
     indices = [word2idx.get(token, word2idx['<UNK>']) for token in tokens]

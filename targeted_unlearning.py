@@ -4,7 +4,7 @@ from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, Subset
 
 # Indlæs trænet model fra Task 1
-model = torch.load("model.pt")
+model = torch.load("mnist_trained_model.pth")
 model.train()
 
 # Tab og optimizer – vi inverterer gradienser manuelt senere

@@ -4,8 +4,8 @@ import argparse
 
 def detect_drift_ks(original_file, drifted_file, text_col="Utterance"):
     print("🔍 Læser data...")
-    df_orig = pd.read_csv(test_sent_emo.csv)
-    df_drift = pd.read_csv(test_drifted.csv)
+    df_orig = pd.read_csv("test_sent_emo.csv")
+    df_drift = pd.read_csv("test_drifted.csv")
 
     # Ekstraher fx tekstlængde som numerisk feature
     print("📏 Ekstraherer tekstlængder...")

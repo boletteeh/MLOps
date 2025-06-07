@@ -10,6 +10,7 @@ import wandb
 import nltk
 nltk.download('punkt')
 from torch.cuda.amp import autocast, GradScaler
+import time
 
 
 
@@ -198,6 +199,8 @@ if __name__ == "__main__":
     train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
     val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
 
+    start_time = time.time()
+    
     model = SentimentModel(
         vocab_size=len(word2idx),
         embedding_dim=50,
@@ -205,7 +208,9 @@ if __name__ == "__main__":
         output_dim=7,
         max_len=max_len
     )
-
+    end_time = time.time()
+    print(f"Training time: {end_time - start_time:.2f} seconds")
+    
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
 

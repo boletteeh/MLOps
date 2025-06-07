@@ -6,6 +6,8 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, f1_score
 import matplotlib.pyplot as plt
 import torch.nn as nn
 from train import load_datasets, inspect_dataset, SentimentModel, preprocess_text, preprocess_dataset, build_word2idx_from_tokens, index_dataset, pad_sequence, pad_dataset, convert_to_tensors, train_model
+import os
+import yaml
 
 config_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "config.yaml"))
 with open(config_path, "r") as f:

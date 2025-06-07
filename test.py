@@ -7,6 +7,10 @@ import matplotlib.pyplot as plt
 import torch.nn as nn
 from train import load_datasets, inspect_dataset, SentimentModel, preprocess_text, preprocess_dataset, build_word2idx_from_tokens, index_dataset, pad_sequence, pad_dataset, convert_to_tensors, train_model
 
+config_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "config.yaml"))
+with open(config_path, "r") as f:
+    config = yaml.safe_load(f)
+
 def evaluate_model(model, loader, criterion, device):
     model.eval()
     total_correct = 0
@@ -51,7 +55,7 @@ def main():
     test_data = index_dataset(test_data, word2idx)
 
     # Pad datasets
-    MAX_LEN = 69
+    MAX_LEN = config['data']['max_len']
     train_data = pad_dataset(train_data, MAX_LEN)
     val_data = pad_dataset(val_data, MAX_LEN)
     test_data = pad_dataset(test_data, MAX_LEN)
@@ -62,18 +66,18 @@ def main():
     X_test, y_test = convert_to_tensors(test_data)
 
     # Create DataLoaders
-    train_loader = DataLoader(TensorDataset(X_train, y_train), batch_size=32, shuffle=True)
-    val_loader = DataLoader(TensorDataset(X_val, y_val), batch_size=32, shuffle=False)
-    test_loader = DataLoader(TensorDataset(X_test, y_test), batch_size=32, shuffle=False)
+    train_loader = DataLoader(TensorDataset(X_train, y_train), batch_size=config['data']['batch_size'], shuffle=True)
+    val_loader = DataLoader(TensorDataset(X_val, y_val), batch_size=config['data']['batch_size'], shuffle=False)
+    test_loader = DataLoader(TensorDataset(X_test, y_test), batch_size=config['data']['batch_size'], shuffle=False)
 
     # Initialize model, loss, and optimizer
-    model = SentimentModel(len(word2idx), 50, 50, 7, MAX_LEN).to(device)
+    model = SentimentModel(len(word2idx), config['model']['embedding_dim'], config['model']['hidden_dim'], config['model']['output_dim'], config['data']['max_len'].to(device)
     class_weights = torch.tensor([1.0, 3.0, 3.0, 1.0, 1.0, 1.5, 1.0], dtype=torch.float).to(device)
     criterion = nn.CrossEntropyLoss(weight=class_weights)
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+    optimizer = torch.optim.Adam(model.parameters(), lr=config['training']['learning_rate'])
 
     # Train model
-    train_losses = train_model(model, train_loader, val_loader, criterion, optimizer, epochs=15, device=device)
+    train_losses = train_model(model, train_loader, val_loader, criterion, optimizer, epochs=config['training']['epochs'], device=device)
 
     # Load the best model
     #model.load_state_dict(torch.load("best_model.pth"))

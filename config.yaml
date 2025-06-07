@@ -1,18 +1,18 @@
----
+data:
+  train_path: "train_sent_emo.csv"
+  val_path: "val_sent_emo.csv"
+  test_path: "test_sent_emo.csv"
+  max_len: 69
+  batch_size: 32
 
-    data:
-      train_path: "train_sent_emo.csv"
-      val_path: "val_sent_emo.csv"
-      test_path: "test_sent_emo.csv"
-      max_len: 69
-      batch_size: 32
+model:
+  embedding_dim: 50
+  hidden_dim: 50
+  output_dim: 7
+  vocab_size: 5931
 
-    model:
-      embedding_dim: 50
-      hidden_dim: 50
-      output_dim: 7
+training:
+  epochs: 15
+  learning_rate: 0.001
+  class_weights: [1.0, 3.0, 3.0, 1.0, 1.0, 1.5, 1.0]
 
-    training:
-      epochs: 15
-      learning_rate: 0.001
-      class_weights: [1.0, 3.0, 3.0, 1.0, 1.0, 1.5, 1.0]

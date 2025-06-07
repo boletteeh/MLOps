@@ -1,0 +1,4 @@
+2025-06-05 20:54:05,023 - CarbonTrackerThread - CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s): 
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj

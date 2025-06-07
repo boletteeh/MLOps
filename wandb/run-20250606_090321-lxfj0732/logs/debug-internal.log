@@ -1,0 +1,17 @@
+{"time":"2025-06-06T09:03:22.89828628+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250606_090321-lxfj0732/logs/debug-core.log"}
+{"time":"2025-06-06T09:03:28.342072053+02:00","level":"ERROR","msg":"monitor: failed to initialize GPU asset: monitor: could not get GPU binary port: timeout reading portfile /tmp/.system-monitor-portfile2807919937"}
+{"time":"2025-06-06T09:03:28.592271755+02:00","level":"INFO","msg":"stream: created new stream","id":"lxfj0732"}
+{"time":"2025-06-06T09:03:28.592329513+02:00","level":"INFO","msg":"stream: started","id":"lxfj0732"}
+{"time":"2025-06-06T09:03:28.592398201+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"lxfj0732"}
+{"time":"2025-06-06T09:03:28.592446812+02:00","level":"INFO","msg":"sender: started","stream_id":"lxfj0732"}
+{"time":"2025-06-06T09:03:28.592554383+02:00","level":"INFO","msg":"handler: started","stream_id":"lxfj0732"}
+{"time":"2025-06-06T09:03:28.871121706+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-06T09:04:41.066174482+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-06T09:04:41.066244924+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-06T09:04:42.033893215+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-06T09:04:42.072246046+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 24-29, summary","runtime_seconds":0.038065293}],"total_operations":1}}
+{"time":"2025-06-06T09:04:42.28090703+02:00","level":"INFO","msg":"stream: closing","id":"lxfj0732"}
+{"time":"2025-06-06T09:04:42.280950241+02:00","level":"INFO","msg":"handler: closed","stream_id":"lxfj0732"}
+{"time":"2025-06-06T09:04:42.280972983+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"lxfj0732"}
+{"time":"2025-06-06T09:04:42.281012758+02:00","level":"INFO","msg":"sender: closed","stream_id":"lxfj0732"}
+{"time":"2025-06-06T09:04:42.281086535+02:00","level":"INFO","msg":"stream: closed","id":"lxfj0732"}

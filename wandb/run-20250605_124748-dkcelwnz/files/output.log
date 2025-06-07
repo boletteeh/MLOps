@@ -1,0 +1,3 @@
+/ceph/home/student.aau.dk/kl15rg/MLOps/train.py:114: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+wandb: Finishing previous runs because reinit is set to True.

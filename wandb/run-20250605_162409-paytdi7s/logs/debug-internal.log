@@ -1,0 +1,16 @@
+{"time":"2025-06-05T16:24:10.644478585+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250605_162409-paytdi7s/logs/debug-core.log"}
+{"time":"2025-06-05T16:24:11.222081619+02:00","level":"INFO","msg":"stream: created new stream","id":"paytdi7s"}
+{"time":"2025-06-05T16:24:11.222159174+02:00","level":"INFO","msg":"stream: started","id":"paytdi7s"}
+{"time":"2025-06-05T16:24:11.222251497+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"paytdi7s"}
+{"time":"2025-06-05T16:24:11.222276213+02:00","level":"INFO","msg":"handler: started","stream_id":"paytdi7s"}
+{"time":"2025-06-05T16:24:11.222366372+02:00","level":"INFO","msg":"sender: started","stream_id":"paytdi7s"}
+{"time":"2025-06-05T16:24:11.484468105+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-05T16:25:10.513824824+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-05T16:25:10.513915323+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-05T16:25:11.508215397+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-05T16:25:11.517072181+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 20-29, summary, console lines 22-31","runtime_seconds":0.00865707}],"total_operations":1}}
+{"time":"2025-06-05T16:25:11.756724803+02:00","level":"INFO","msg":"stream: closing","id":"paytdi7s"}
+{"time":"2025-06-05T16:25:11.756750461+02:00","level":"INFO","msg":"handler: closed","stream_id":"paytdi7s"}
+{"time":"2025-06-05T16:25:11.756765439+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"paytdi7s"}
+{"time":"2025-06-05T16:25:11.756780166+02:00","level":"INFO","msg":"sender: closed","stream_id":"paytdi7s"}
+{"time":"2025-06-05T16:25:11.756856038+02:00","level":"INFO","msg":"stream: closed","id":"paytdi7s"}

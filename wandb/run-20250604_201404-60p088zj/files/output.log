@@ -1,0 +1,23 @@
+Epoch [1/10], Train Loss: 1.4808
+Epoch [1/10], Validation Loss: 1.4561
+Best model saved with Validation Loss: 1.4561
+Epoch [2/10], Train Loss: 1.3174
+Epoch [2/10], Validation Loss: 1.4313
+Best model saved with Validation Loss: 1.4313
+Epoch [3/10], Train Loss: 1.2533
+Epoch [3/10], Validation Loss: 1.4197
+Best model saved with Validation Loss: 1.4197
+Epoch [4/10], Train Loss: 1.1836
+Epoch [4/10], Validation Loss: 1.4738
+Epoch [5/10], Train Loss: 1.0965
+Epoch [5/10], Validation Loss: 1.5000
+Epoch [6/10], Train Loss: 0.9987
+Epoch [6/10], Validation Loss: 1.6994
+Epoch [7/10], Train Loss: 0.9073
+Epoch [7/10], Validation Loss: 1.8759
+Epoch [8/10], Train Loss: 0.8022
+Epoch [8/10], Validation Loss: 2.1458
+Epoch [9/10], Train Loss: 0.7462
+Epoch [9/10], Validation Loss: 1.9193
+Epoch [10/10], Train Loss: 0.6533
+Epoch [10/10], Validation Loss: 2.6310

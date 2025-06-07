@@ -1,0 +1,114 @@
+CarbonTracker: CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s):
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj
+Epoch [1/15], Train Loss: 1.6147
+Epoch [1/15], Validation Loss: 1.6137
+Best model saved with Validation Loss: 1.6137
+CarbonTracker: WARNING - ElectricityMaps API key not set. Will default to average carbon intensity.
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 151.6503 gCO2/kWh.
+CarbonTracker: Live carbon intensity could not be fetched at detected location: Aalborg, North Denmark, DK. Defaulted to average carbon intensity for DK in 2023 of 151.65 gCO2/kWh. at detected location: Aalborg, North Denmark, DK.
+CarbonTracker:
+Predicted consumption for 15 epoch(s):
+	Time:	0:01:06
+	Energy:	0.000471583607 kWh
+	CO2eq:	0.071515795511 g
+	This is equivalent to:
+	0.000665263214 km travelled by car
+CarbonTracker: CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s):
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj
+Epoch [2/15], Train Loss: 1.4785
+Epoch [2/15], Validation Loss: 1.5725
+Best model saved with Validation Loss: 1.5725
+CarbonTracker: CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s):
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj
+Epoch [3/15], Train Loss: 1.4100
+Epoch [3/15], Validation Loss: 1.5689
+Best model saved with Validation Loss: 1.5689
+CarbonTracker: CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s):
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj
+Epoch [4/15], Train Loss: 1.3328
+Epoch [4/15], Validation Loss: 1.6649
+CarbonTracker: CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s):
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj
+Epoch [5/15], Train Loss: 1.2289
+Epoch [5/15], Validation Loss: 1.7080
+CarbonTracker: CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s):
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj
+Epoch [6/15], Train Loss: 1.0926
+Epoch [6/15], Validation Loss: 1.8876
+CarbonTracker: CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s):
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj
+Epoch [7/15], Train Loss: 0.9475
+Epoch [7/15], Validation Loss: 2.1619
+CarbonTracker: CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s):
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj
+Epoch [8/15], Train Loss: 0.7810
+Epoch [8/15], Validation Loss: 2.6086
+CarbonTracker: CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s):
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj
+Epoch [9/15], Train Loss: 0.6344
+Epoch [9/15], Validation Loss: 2.8792
+CarbonTracker: CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s):
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj
+Epoch [10/15], Train Loss: 0.4972
+Epoch [10/15], Validation Loss: 3.2191
+CarbonTracker: CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s):
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj
+Epoch [11/15], Train Loss: 0.4003
+Epoch [11/15], Validation Loss: 3.8382
+CarbonTracker: CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s):
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj
+Epoch [12/15], Train Loss: 0.2968
+Epoch [12/15], Validation Loss: 4.3777
+CarbonTracker: CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s):
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj
+Epoch [13/15], Train Loss: 0.2582
+Epoch [13/15], Validation Loss: 4.9784
+CarbonTracker: CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s):
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj
+Epoch [14/15], Train Loss: 0.2103
+Epoch [14/15], Validation Loss: 5.5236
+CarbonTracker: CRITICAL - Could not read CPU/DRAM energy consumption due to lack of read-permissions.
+	Please run the following command(s):
+		sudo chmod +r /sys/class/powercap/intel-rapl:1/energy_uj
+		sudo chmod +r /sys/class/powercap/intel-rapl:0/energy_uj
+Epoch [15/15], Train Loss: 0.2223
+Epoch [15/15], Validation Loss: 5.5284
+CarbonTracker: WARNING - ElectricityMaps API key not set. Will default to average carbon intensity.
+CarbonTracker: WARNING - Failed to retrieve carbon intensity: Defaulting to average carbon intensity 151.6503 gCO2/kWh.
+CarbonTracker: Average carbon intensity during training was 151.65 gCO2/kWh at detected location: Aalborg, North Denmark, DK.
+CarbonTracker:
+Actual consumption for 15 epoch(s):
+	Time:	0:02:11
+	Energy:	0.000944885715 kWh
+	CO2eq:	0.143292202165 g
+	This is equivalent to:
+	0.001332950718 km travelled by car
+CarbonTracker: Finished monitoring.

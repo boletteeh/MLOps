@@ -1,0 +1,16 @@
+{"time":"2025-06-04T20:14:04.981967627+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250604_201404-tfxl2cp9/logs/debug-core.log"}
+{"time":"2025-06-04T20:14:05.440995613+02:00","level":"INFO","msg":"stream: created new stream","id":"tfxl2cp9"}
+{"time":"2025-06-04T20:14:05.441100149+02:00","level":"INFO","msg":"stream: started","id":"tfxl2cp9"}
+{"time":"2025-06-04T20:14:05.441126548+02:00","level":"INFO","msg":"handler: started","stream_id":"tfxl2cp9"}
+{"time":"2025-06-04T20:14:05.441157716+02:00","level":"INFO","msg":"sender: started","stream_id":"tfxl2cp9"}
+{"time":"2025-06-04T20:14:05.44123455+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"tfxl2cp9"}
+{"time":"2025-06-04T20:14:05.741838621+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T20:14:06.433750152+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T20:14:06.433860358+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T20:14:07.39866954+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.629987626,"progress":"62B/62B"},{"desc":"uploading config.yaml","runtime_seconds":0.44839022,"progress":"506B/506B"}],"total_operations":2}}
+{"time":"2025-06-04T20:14:07.530819443+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T20:14:07.8187968+02:00","level":"INFO","msg":"stream: closing","id":"tfxl2cp9"}
+{"time":"2025-06-04T20:14:07.818860469+02:00","level":"INFO","msg":"handler: closed","stream_id":"tfxl2cp9"}
+{"time":"2025-06-04T20:14:07.818888782+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"tfxl2cp9"}
+{"time":"2025-06-04T20:14:07.818923266+02:00","level":"INFO","msg":"sender: closed","stream_id":"tfxl2cp9"}
+{"time":"2025-06-04T20:14:07.818992536+02:00","level":"INFO","msg":"stream: closed","id":"tfxl2cp9"}

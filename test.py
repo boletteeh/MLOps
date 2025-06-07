@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader, TensorDataset
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, f1_score
 import matplotlib.pyplot as plt
 import torch.nn as nn
-from train import load_datasets, inspect_dataset, SentimentModel, preprocess_text, preprocess_dataset, build_word2idx, index_dataset, pad_sequence, pad_dataset, convert_to_tensors, train_model
+from train import load_datasets, inspect_dataset, SentimentModel, preprocess_text, preprocess_dataset, build_word2idx_from_tokens, index_dataset, pad_sequence, pad_dataset, convert_to_tensors, train_model
 
 def evaluate_model(model, loader, criterion, device):
     model.eval()
@@ -40,7 +40,8 @@ def main():
     test_data = preprocess_dataset(test_data)
 
     # Build word2idx and index datasets
-    word2idx = build_word2idx(train_data)
+    word2idx = build_word2idx_from_tokens(train_data['tokens'])
+    print(f"Vocabulary size: {len(word2idx)}")
     train_data = index_dataset(train_data, word2idx)
     val_data = index_dataset(val_data, word2idx)
     test_data = index_dataset(test_data, word2idx)

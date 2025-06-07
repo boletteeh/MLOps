@@ -1,0 +1,17 @@
+{"time":"2025-06-05T10:16:02.088830579+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250605_101601-gry7bza5/logs/debug-core.log"}
+{"time":"2025-06-05T10:16:07.818684416+02:00","level":"ERROR","msg":"monitor: failed to initialize GPU asset: monitor: could not get GPU binary port: timeout reading portfile /tmp/.system-monitor-portfile707934922"}
+{"time":"2025-06-05T10:16:08.084888764+02:00","level":"INFO","msg":"stream: created new stream","id":"gry7bza5"}
+{"time":"2025-06-05T10:16:08.084980586+02:00","level":"INFO","msg":"stream: started","id":"gry7bza5"}
+{"time":"2025-06-05T10:16:08.084989513+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"gry7bza5"}
+{"time":"2025-06-05T10:16:08.085033906+02:00","level":"INFO","msg":"handler: started","stream_id":"gry7bza5"}
+{"time":"2025-06-05T10:16:08.085101793+02:00","level":"INFO","msg":"sender: started","stream_id":"gry7bza5"}
+{"time":"2025-06-05T10:16:08.587255268+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-05T10:16:37.086153203+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-05T10:16:37.08622615+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-05T10:16:38.0546793+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-05T10:16:38.089405762+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 0-19, summary, console lines 2-24","runtime_seconds":0.034488667}],"total_operations":1}}
+{"time":"2025-06-05T10:16:38.30765006+02:00","level":"INFO","msg":"stream: closing","id":"gry7bza5"}
+{"time":"2025-06-05T10:16:38.307685426+02:00","level":"INFO","msg":"handler: closed","stream_id":"gry7bza5"}
+{"time":"2025-06-05T10:16:38.307703811+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"gry7bza5"}
+{"time":"2025-06-05T10:16:38.30772474+02:00","level":"INFO","msg":"sender: closed","stream_id":"gry7bza5"}
+{"time":"2025-06-05T10:16:38.307784321+02:00","level":"INFO","msg":"stream: closed","id":"gry7bza5"}

@@ -1,0 +1,17 @@
+{"time":"2025-06-05T20:43:11.976593792+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250605_204311-wloggp2y/logs/debug-core.log"}
+{"time":"2025-06-05T20:43:12.423161183+02:00","level":"INFO","msg":"stream: created new stream","id":"wloggp2y"}
+{"time":"2025-06-05T20:43:12.42323423+02:00","level":"INFO","msg":"stream: started","id":"wloggp2y"}
+{"time":"2025-06-05T20:43:12.423289103+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"wloggp2y"}
+{"time":"2025-06-05T20:43:12.423371107+02:00","level":"INFO","msg":"handler: started","stream_id":"wloggp2y"}
+{"time":"2025-06-05T20:43:12.423296156+02:00","level":"INFO","msg":"sender: started","stream_id":"wloggp2y"}
+{"time":"2025-06-05T20:43:12.699563253+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-05T20:43:12.969169623+02:00","level":"ERROR","msg":"file transfer: upload: failed to upload: 400 Bad Request","task":"DefaultUploadTask{FileKind: 1, Path: /ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250605_204311-wloggp2y/files/wandb-metadata.json, Name: wandb-metadata.json, Url: https://storage.googleapis.com/wandb-production.appspot.com/boletteeh-aalborg-universitet/MLOps/wloggp2y/wandb-metadata.json?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250605%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250605T184312Z&X-Goog-Expires=86399&X-Goog-Signature=38cbe607e64fb2b314de53cf03488aaba6567e565ecc1fe62a28858aa6dc89c05c5fa3b0b60317cd1a3218906fd3cfd86d5132b0e8988e32d2ce3ec92fc0498156c54fe8410e1c1cc51599c49006dfe05c9d585addb293cc584ebf44db32c4948cc630449f27ce6c32d5d4f7665388f93ba6d4213ef10cd349a58d31bfc7f55e439f7f626bffdb2903601d53e54e0924fbebb67e7adcec8ad0cd05387edc8f3fc9360ce63a98b72fa54b54fdff55eec804d34e70686736d754d8b62c19179a44fa0c16d88c8ac0061450a80def2c0805ad65e49695f6a87a140b1703e53e386c552bbcc01af517b2cd950734eb74e8ec7c60f47858fd9e65a5c532b2fa4dfc19&X-Goog-SignedHeaders=host&X-User=boletteeh, Size: 563}"}
+{"time":"2025-06-05T20:44:01.341156112+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-05T20:44:01.341233046+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-05T20:44:02.345081181+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.572139361,"progress":"506B/506B"}],"total_operations":1}}
+{"time":"2025-06-05T20:44:02.355825769+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-05T20:44:02.641903725+02:00","level":"INFO","msg":"stream: closing","id":"wloggp2y"}
+{"time":"2025-06-05T20:44:02.641940714+02:00","level":"INFO","msg":"handler: closed","stream_id":"wloggp2y"}
+{"time":"2025-06-05T20:44:02.641955802+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"wloggp2y"}
+{"time":"2025-06-05T20:44:02.641971121+02:00","level":"INFO","msg":"sender: closed","stream_id":"wloggp2y"}
+{"time":"2025-06-05T20:44:02.642092589+02:00","level":"INFO","msg":"stream: closed","id":"wloggp2y"}

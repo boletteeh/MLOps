@@ -1,0 +1,17 @@
+{"time":"2025-06-06T09:33:30.425854804+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250606_093330-xv92ivtt/logs/debug-core.log"}
+{"time":"2025-06-06T09:33:35.457574698+02:00","level":"ERROR","msg":"monitor: failed to initialize GPU asset: monitor: could not get GPU binary port: timeout reading portfile /tmp/.system-monitor-portfile1254107238"}
+{"time":"2025-06-06T09:33:35.686080543+02:00","level":"INFO","msg":"stream: created new stream","id":"xv92ivtt"}
+{"time":"2025-06-06T09:33:35.686166243+02:00","level":"INFO","msg":"stream: started","id":"xv92ivtt"}
+{"time":"2025-06-06T09:33:35.686264446+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"xv92ivtt"}
+{"time":"2025-06-06T09:33:35.686338114+02:00","level":"INFO","msg":"sender: started","stream_id":"xv92ivtt"}
+{"time":"2025-06-06T09:33:35.686382066+02:00","level":"INFO","msg":"handler: started","stream_id":"xv92ivtt"}
+{"time":"2025-06-06T09:33:36.003218776+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-06T09:34:38.633111181+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-06T09:34:38.633173227+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-06T09:34:39.584739989+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-06T09:34:39.637034866+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 28-29, summary","runtime_seconds":0.052132484}],"total_operations":1}}
+{"time":"2025-06-06T09:34:39.853674303+02:00","level":"INFO","msg":"stream: closing","id":"xv92ivtt"}
+{"time":"2025-06-06T09:34:39.853706133+02:00","level":"INFO","msg":"handler: closed","stream_id":"xv92ivtt"}
+{"time":"2025-06-06T09:34:39.853721031+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"xv92ivtt"}
+{"time":"2025-06-06T09:34:39.853755635+02:00","level":"INFO","msg":"sender: closed","stream_id":"xv92ivtt"}
+{"time":"2025-06-06T09:34:39.853797984+02:00","level":"INFO","msg":"stream: closed","id":"xv92ivtt"}

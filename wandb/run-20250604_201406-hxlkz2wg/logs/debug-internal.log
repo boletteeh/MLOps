@@ -1,0 +1,16 @@
+{"time":"2025-06-04T20:14:07.867205542+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250604_201406-hxlkz2wg/logs/debug-core.log"}
+{"time":"2025-06-04T20:14:08.277750819+02:00","level":"INFO","msg":"stream: created new stream","id":"hxlkz2wg"}
+{"time":"2025-06-04T20:14:08.277812694+02:00","level":"INFO","msg":"stream: started","id":"hxlkz2wg"}
+{"time":"2025-06-04T20:14:08.277856076+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"hxlkz2wg"}
+{"time":"2025-06-04T20:14:08.277904486+02:00","level":"INFO","msg":"sender: started","stream_id":"hxlkz2wg"}
+{"time":"2025-06-04T20:14:08.277926818+02:00","level":"INFO","msg":"handler: started","stream_id":"hxlkz2wg"}
+{"time":"2025-06-04T20:14:08.504563099+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T20:14:19.845712368+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T20:14:19.845775877+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T20:14:20.799539009+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T20:14:20.84216706+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 0-19, summary, console lines 0-22","runtime_seconds":0.042386629}],"total_operations":1}}
+{"time":"2025-06-04T20:14:21.060053702+02:00","level":"INFO","msg":"stream: closing","id":"hxlkz2wg"}
+{"time":"2025-06-04T20:14:21.060076575+02:00","level":"INFO","msg":"handler: closed","stream_id":"hxlkz2wg"}
+{"time":"2025-06-04T20:14:21.060090421+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"hxlkz2wg"}
+{"time":"2025-06-04T20:14:21.060104898+02:00","level":"INFO","msg":"sender: closed","stream_id":"hxlkz2wg"}
+{"time":"2025-06-04T20:14:21.060156965+02:00","level":"INFO","msg":"stream: closed","id":"hxlkz2wg"}

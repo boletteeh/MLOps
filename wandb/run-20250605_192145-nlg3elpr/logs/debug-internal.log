@@ -1,0 +1,16 @@
+{"time":"2025-06-05T19:21:46.180944221+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250605_192145-nlg3elpr/logs/debug-core.log"}
+{"time":"2025-06-05T19:21:46.656667263+02:00","level":"INFO","msg":"stream: created new stream","id":"nlg3elpr"}
+{"time":"2025-06-05T19:21:46.656796114+02:00","level":"INFO","msg":"stream: started","id":"nlg3elpr"}
+{"time":"2025-06-05T19:21:46.656838975+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"nlg3elpr"}
+{"time":"2025-06-05T19:21:46.656889099+02:00","level":"INFO","msg":"sender: started","stream_id":"nlg3elpr"}
+{"time":"2025-06-05T19:21:46.656990098+02:00","level":"INFO","msg":"handler: started","stream_id":"nlg3elpr"}
+{"time":"2025-06-05T19:21:46.95324641+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-05T19:24:02.477504038+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-05T19:24:02.480777111+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-05T19:24:03.481366766+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.60882304,"progress":"506B/506B"}],"total_operations":1}}
+{"time":"2025-06-05T19:24:03.497791601+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-05T19:24:03.74063353+02:00","level":"INFO","msg":"stream: closing","id":"nlg3elpr"}
+{"time":"2025-06-05T19:24:03.740686308+02:00","level":"INFO","msg":"handler: closed","stream_id":"nlg3elpr"}
+{"time":"2025-06-05T19:24:03.740708189+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"nlg3elpr"}
+{"time":"2025-06-05T19:24:03.740722166+02:00","level":"INFO","msg":"sender: closed","stream_id":"nlg3elpr"}
+{"time":"2025-06-05T19:24:03.740844194+02:00","level":"INFO","msg":"stream: closed","id":"nlg3elpr"}

@@ -1,0 +1,15 @@
+{"time":"2025-06-04T19:34:21.658079402+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250604_193419-l6tpn60w/logs/debug-core.log"}
+{"time":"2025-06-04T19:34:22.404464309+02:00","level":"INFO","msg":"stream: created new stream","id":"l6tpn60w"}
+{"time":"2025-06-04T19:34:22.404557112+02:00","level":"INFO","msg":"stream: started","id":"l6tpn60w"}
+{"time":"2025-06-04T19:34:22.404634718+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"l6tpn60w"}
+{"time":"2025-06-04T19:34:22.404642542+02:00","level":"INFO","msg":"handler: started","stream_id":"l6tpn60w"}
+{"time":"2025-06-04T19:34:22.404675043+02:00","level":"INFO","msg":"sender: started","stream_id":"l6tpn60w"}
+{"time":"2025-06-04T19:34:22.663046189+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T19:34:29.699520828+02:00","level":"INFO","msg":"stream: closing","id":"l6tpn60w"}
+{"time":"2025-06-04T19:34:29.699611918+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T19:34:29.699673864+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T19:34:30.684118355+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T19:34:30.931639462+02:00","level":"INFO","msg":"handler: closed","stream_id":"l6tpn60w"}
+{"time":"2025-06-04T19:34:30.931660461+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"l6tpn60w"}
+{"time":"2025-06-04T19:34:30.931677803+02:00","level":"INFO","msg":"sender: closed","stream_id":"l6tpn60w"}
+{"time":"2025-06-04T19:34:30.931768182+02:00","level":"INFO","msg":"stream: closed","id":"l6tpn60w"}

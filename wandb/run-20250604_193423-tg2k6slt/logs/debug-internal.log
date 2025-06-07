@@ -1,0 +1,15 @@
+{"time":"2025-06-04T19:34:25.31429944+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250604_193423-tg2k6slt/logs/debug-core.log"}
+{"time":"2025-06-04T19:34:25.723313804+02:00","level":"INFO","msg":"stream: created new stream","id":"tg2k6slt"}
+{"time":"2025-06-04T19:34:25.723362425+02:00","level":"INFO","msg":"stream: started","id":"tg2k6slt"}
+{"time":"2025-06-04T19:34:25.723415504+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"tg2k6slt"}
+{"time":"2025-06-04T19:34:25.72344539+02:00","level":"INFO","msg":"sender: started","stream_id":"tg2k6slt"}
+{"time":"2025-06-04T19:34:25.72347206+02:00","level":"INFO","msg":"handler: started","stream_id":"tg2k6slt"}
+{"time":"2025-06-04T19:34:26.073990268+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T19:34:29.77549096+02:00","level":"INFO","msg":"stream: closing","id":"tg2k6slt"}
+{"time":"2025-06-04T19:34:29.775555881+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T19:34:29.775647192+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T19:34:30.729571861+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T19:34:30.975896571+02:00","level":"INFO","msg":"handler: closed","stream_id":"tg2k6slt"}
+{"time":"2025-06-04T19:34:30.975937768+02:00","level":"INFO","msg":"sender: closed","stream_id":"tg2k6slt"}
+{"time":"2025-06-04T19:34:30.97591735+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"tg2k6slt"}
+{"time":"2025-06-04T19:34:30.975998241+02:00","level":"INFO","msg":"stream: closed","id":"tg2k6slt"}

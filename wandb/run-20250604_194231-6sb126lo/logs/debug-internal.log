@@ -1,0 +1,17 @@
+{"time":"2025-06-04T19:42:32.899404639+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250604_194231-6sb126lo/logs/debug-core.log"}
+{"time":"2025-06-04T19:42:33.392069354+02:00","level":"INFO","msg":"stream: created new stream","id":"6sb126lo"}
+{"time":"2025-06-04T19:42:33.392115681+02:00","level":"INFO","msg":"stream: started","id":"6sb126lo"}
+{"time":"2025-06-04T19:42:33.392137562+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"6sb126lo"}
+{"time":"2025-06-04T19:42:33.392194158+02:00","level":"INFO","msg":"sender: started","stream_id":"6sb126lo"}
+{"time":"2025-06-04T19:42:33.3922489+02:00","level":"INFO","msg":"handler: started","stream_id":"6sb126lo"}
+{"time":"2025-06-04T19:42:33.69553264+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T19:42:34.176305258+02:00","level":"ERROR","msg":"file transfer: upload: failed to upload: 400 Bad Request","task":"DefaultUploadTask{FileKind: 1, Path: /ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250604_194231-6sb126lo/files/wandb-metadata.json, Name: wandb-metadata.json, Url: https://storage.googleapis.com/wandb-production.appspot.com/boletteeh-aalborg-universitet/MLOps/6sb126lo/wandb-metadata.json?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250604%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250604T174233Z&X-Goog-Expires=86399&X-Goog-Signature=a522345487c75945b3f2758186883fdafefe559b0d7f489f9ac4d16fa7f97f64273dfd1fbfdecba89cec8301bc82c73a6c91bbe8595bdbd5bd03aa2be52acc172cd65d5746a707b70c73f9f203aab5cc0f330b0e43d776bfc694c2d8e41eab043f65c82109044bd4406067ebc9750545fcb7ad0e6536328e910d02f304fa7df9dc03b7dbe1963816cf1ebcc26b46e885b3f66c3ab833dfa3041af65085d9247ebd30792462b30c6b726c565033453af6cde8ccdd04f20343bc5ecc80342e8af26833a21379946a8f5f22011f99c1d857e93fc14e25df8d1ed1fd4f033a7ec03595ea3bed72f430125e3730f5a6d0a55517e5ba56f468b21a54c3de447ac4eb50&X-Goog-SignedHeaders=host&X-User=boletteeh, Size: 548}"}
+{"time":"2025-06-04T19:42:34.635974688+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T19:42:34.636068694+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T19:42:35.597632166+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.657558886,"progress":"62B/62B"},{"desc":"uploading config.yaml","runtime_seconds":0.355810137,"progress":"506B/506B"}],"total_operations":2}}
+{"time":"2025-06-04T19:42:35.735087218+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T19:42:35.998671725+02:00","level":"INFO","msg":"stream: closing","id":"6sb126lo"}
+{"time":"2025-06-04T19:42:35.998710348+02:00","level":"INFO","msg":"handler: closed","stream_id":"6sb126lo"}
+{"time":"2025-06-04T19:42:35.998731127+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"6sb126lo"}
+{"time":"2025-06-04T19:42:35.998827847+02:00","level":"INFO","msg":"sender: closed","stream_id":"6sb126lo"}
+{"time":"2025-06-04T19:42:35.998847123+02:00","level":"INFO","msg":"stream: closed","id":"6sb126lo"}

@@ -1,0 +1,10 @@
+{"time":"2025-06-04T19:53:06.74335794+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250604_195305-yjd29dwu/logs/debug-core.log"}
+{"time":"2025-06-04T19:53:07.152073105+02:00","level":"INFO","msg":"stream: created new stream","id":"yjd29dwu"}
+{"time":"2025-06-04T19:53:07.152127126+02:00","level":"INFO","msg":"stream: started","id":"yjd29dwu"}
+{"time":"2025-06-04T19:53:07.152155219+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"yjd29dwu"}
+{"time":"2025-06-04T19:53:07.15219878+02:00","level":"INFO","msg":"sender: started","stream_id":"yjd29dwu"}
+{"time":"2025-06-04T19:53:07.152259303+02:00","level":"INFO","msg":"handler: started","stream_id":"yjd29dwu"}
+{"time":"2025-06-04T19:53:07.436871259+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T19:53:07.883584936+02:00","level":"INFO","msg":"stream: closing","id":"yjd29dwu"}
+{"time":"2025-06-04T19:53:07.883637164+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T19:53:07.883677349+02:00","level":"INFO","msg":"Stopped system monitor"}

@@ -1,0 +1,18 @@
+{"time":"2025-06-05T10:16:02.09371319+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250605_101601-fxlvllue/logs/debug-core.log"}
+{"time":"2025-06-05T10:16:07.827778062+02:00","level":"ERROR","msg":"monitor: failed to initialize GPU asset: monitor: could not get GPU binary port: timeout reading portfile /tmp/.system-monitor-portfile1231584489"}
+{"time":"2025-06-05T10:16:08.085219012+02:00","level":"INFO","msg":"stream: created new stream","id":"fxlvllue"}
+{"time":"2025-06-05T10:16:08.085306516+02:00","level":"INFO","msg":"stream: started","id":"fxlvllue"}
+{"time":"2025-06-05T10:16:08.085357231+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"fxlvllue"}
+{"time":"2025-06-05T10:16:08.085408577+02:00","level":"INFO","msg":"handler: started","stream_id":"fxlvllue"}
+{"time":"2025-06-05T10:16:08.085470853+02:00","level":"INFO","msg":"sender: started","stream_id":"fxlvllue"}
+{"time":"2025-06-05T10:16:08.45097415+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-05T10:16:08.740730703+02:00","level":"ERROR","msg":"file transfer: upload: failed to upload: 400 Bad Request","task":"DefaultUploadTask{FileKind: 1, Path: /ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250605_101601-fxlvllue/files/wandb-metadata.json, Name: wandb-metadata.json, Url: https://storage.googleapis.com/wandb-production.appspot.com/boletteeh-aalborg-universitet/MLOps/fxlvllue/wandb-metadata.json?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250605%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250605T081608Z&X-Goog-Expires=86399&X-Goog-Signature=514fe6b74aa3689cdbe959f1bac0594f1f6cbedef270c84f9c8f95211faebe870f6433d89114409d0a5a53ab072076ddb06763d7623cdfd6e73e7b6d1f4c95f8f5175187f7e48e92394f3aa0d098c112847e8595188712e556097a8524710253c9e738fcf1e57dee80ba2ab53509c24efbcca5fea67c83b097eebad7a5783094245aa6ed17646ca1eb311925b3fe0c67c01c611b6b9f91871a2fa1b31549fafa0da4142930f41bd2cbf38ec5d7af699604eaad24bf1851778883d6cf9480b1f40062070801c6a7059499d4e88d5a9074e85a36561c0d0416eda9f2b96c7ce53a12ac99b3f543fda78bc25eaf6e17e1b7b3fe0a4291df47c2ae4e888e60d48514&X-Goog-SignedHeaders=host&X-User=boletteeh, Size: 548}"}
+{"time":"2025-06-05T10:16:15.745665845+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-05T10:16:15.74574881+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-05T10:16:16.730608273+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.664759765,"progress":"266B/266B"},{"desc":"uploading config.yaml","runtime_seconds":0.375702981,"progress":"506B/506B"}],"total_operations":2}}
+{"time":"2025-06-05T10:16:16.912002247+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-05T10:16:17.164064719+02:00","level":"INFO","msg":"stream: closing","id":"fxlvllue"}
+{"time":"2025-06-05T10:16:17.164103922+02:00","level":"INFO","msg":"handler: closed","stream_id":"fxlvllue"}
+{"time":"2025-06-05T10:16:17.164123308+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"fxlvllue"}
+{"time":"2025-06-05T10:16:17.164152042+02:00","level":"INFO","msg":"sender: closed","stream_id":"fxlvllue"}
+{"time":"2025-06-05T10:16:17.164201204+02:00","level":"INFO","msg":"stream: closed","id":"fxlvllue"}

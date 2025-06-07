@@ -1,0 +1,16 @@
+{"time":"2025-06-04T20:10:26.219414197+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250604_201024-kdhajtad/logs/debug-core.log"}
+{"time":"2025-06-04T20:10:26.626857658+02:00","level":"INFO","msg":"stream: created new stream","id":"kdhajtad"}
+{"time":"2025-06-04T20:10:26.62690667+02:00","level":"INFO","msg":"stream: started","id":"kdhajtad"}
+{"time":"2025-06-04T20:10:26.626942276+02:00","level":"INFO","msg":"handler: started","stream_id":"kdhajtad"}
+{"time":"2025-06-04T20:10:26.626966642+02:00","level":"INFO","msg":"sender: started","stream_id":"kdhajtad"}
+{"time":"2025-06-04T20:10:26.626936105+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"kdhajtad"}
+{"time":"2025-06-04T20:10:26.896753471+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T20:10:27.22456077+02:00","level":"ERROR","msg":"file transfer: upload: failed to upload: 400 Bad Request","task":"DefaultUploadTask{FileKind: 1, Path: /ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250604_201024-kdhajtad/files/wandb-metadata.json, Name: wandb-metadata.json, Url: https://storage.googleapis.com/wandb-production.appspot.com/boletteeh-aalborg-universitet/MLOps/kdhajtad/wandb-metadata.json?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250604%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250604T181027Z&X-Goog-Expires=86399&X-Goog-Signature=a6f3b204c77c76ca4fb2ca5547bf1f43d1ca98b7dcd4c32255e5e6df4c3a428ac6540641979e85f22ede79f616a530808118b8f195aad2ceaef8e3f6ff56664bee9b08a85d29fa34cbf9fc96b0eb348385b03f560fb713e0c47a710ae8a4b4aafa04ff4a94b65404536f25a7605759b830477eb21931403b6b3745f84b1abc7a3550e0893e9dcf6c27be9f8439325942fc95edd4932c8d86d397d0d5e04dd901eb4f73204bcf2f9ec0154fd115082e66554c2d3a6cfe2c897e2d31ed0c2d6159fd8f626c1df67723c865825ebc3c235c4ef144633d2237701a795f6de8c90b7dbca80ab18c1cf8bd313187b96485cbbda2cfd8ab6ce791d6201487714bb98ea1&X-Goog-SignedHeaders=host&X-User=boletteeh, Size: 548}"}
+{"time":"2025-06-04T20:10:29.561733183+02:00","level":"INFO","msg":"stream: closing","id":"kdhajtad"}
+{"time":"2025-06-04T20:10:29.561783397+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T20:10:29.561822239+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T20:10:30.549317451+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T20:10:30.816807819+02:00","level":"INFO","msg":"handler: closed","stream_id":"kdhajtad"}
+{"time":"2025-06-04T20:10:30.81686766+02:00","level":"INFO","msg":"sender: closed","stream_id":"kdhajtad"}
+{"time":"2025-06-04T20:10:30.816858393+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"kdhajtad"}
+{"time":"2025-06-04T20:10:30.816950796+02:00","level":"INFO","msg":"stream: closed","id":"kdhajtad"}

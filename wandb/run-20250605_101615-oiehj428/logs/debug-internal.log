@@ -1,0 +1,17 @@
+{"time":"2025-06-05T10:16:17.207069883+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250605_101615-oiehj428/logs/debug-core.log"}
+{"time":"2025-06-05T10:16:22.239955217+02:00","level":"ERROR","msg":"monitor: failed to initialize GPU asset: monitor: could not get GPU binary port: timeout reading portfile /tmp/.system-monitor-portfile2677392595"}
+{"time":"2025-06-05T10:16:22.448081163+02:00","level":"INFO","msg":"stream: created new stream","id":"oiehj428"}
+{"time":"2025-06-05T10:16:22.448161283+02:00","level":"INFO","msg":"stream: started","id":"oiehj428"}
+{"time":"2025-06-05T10:16:22.448221976+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"oiehj428"}
+{"time":"2025-06-05T10:16:22.448264636+02:00","level":"INFO","msg":"sender: started","stream_id":"oiehj428"}
+{"time":"2025-06-05T10:16:22.448301625+02:00","level":"INFO","msg":"handler: started","stream_id":"oiehj428"}
+{"time":"2025-06-05T10:16:22.818871447+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-05T10:16:37.084010106+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-05T10:16:37.084069387+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-05T10:16:38.079666419+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-05T10:16:38.087293712+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 0-19, summary, console lines 1-23","runtime_seconds":0.007444472}],"total_operations":1}}
+{"time":"2025-06-05T10:16:38.339089996+02:00","level":"INFO","msg":"stream: closing","id":"oiehj428"}
+{"time":"2025-06-05T10:16:38.339126104+02:00","level":"INFO","msg":"handler: closed","stream_id":"oiehj428"}
+{"time":"2025-06-05T10:16:38.339148936+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"oiehj428"}
+{"time":"2025-06-05T10:16:38.339182098+02:00","level":"INFO","msg":"sender: closed","stream_id":"oiehj428"}
+{"time":"2025-06-05T10:16:38.339234707+02:00","level":"INFO","msg":"stream: closed","id":"oiehj428"}

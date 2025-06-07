@@ -1,0 +1,16 @@
+{"time":"2025-06-04T19:58:42.65900806+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250604_195842-wmgpeham/logs/debug-core.log"}
+{"time":"2025-06-04T19:58:43.110635949+02:00","level":"INFO","msg":"stream: created new stream","id":"wmgpeham"}
+{"time":"2025-06-04T19:58:43.110722991+02:00","level":"INFO","msg":"stream: started","id":"wmgpeham"}
+{"time":"2025-06-04T19:58:43.110744141+02:00","level":"INFO","msg":"handler: started","stream_id":"wmgpeham"}
+{"time":"2025-06-04T19:58:43.110794866+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"wmgpeham"}
+{"time":"2025-06-04T19:58:43.110794695+02:00","level":"INFO","msg":"sender: started","stream_id":"wmgpeham"}
+{"time":"2025-06-04T19:58:43.378434557+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T19:58:44.013808319+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T19:58:44.013886295+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T19:58:44.999636305+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.504811304,"progress":"62B/62B"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.504798669,"progress":"24B/24B"},{"desc":"uploading config.yaml","runtime_seconds":0.343375165,"progress":"506B/506B"}],"total_operations":3}}
+{"time":"2025-06-04T19:58:45.245730488+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T19:58:45.531132058+02:00","level":"INFO","msg":"stream: closing","id":"wmgpeham"}
+{"time":"2025-06-04T19:58:45.53117046+02:00","level":"INFO","msg":"handler: closed","stream_id":"wmgpeham"}
+{"time":"2025-06-04T19:58:45.531188514+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"wmgpeham"}
+{"time":"2025-06-04T19:58:45.531210705+02:00","level":"INFO","msg":"sender: closed","stream_id":"wmgpeham"}
+{"time":"2025-06-04T19:58:45.531291015+02:00","level":"INFO","msg":"stream: closed","id":"wmgpeham"}

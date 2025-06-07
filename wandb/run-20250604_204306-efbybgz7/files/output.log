@@ -1,0 +1,42 @@
+/ceph/home/student.aau.dk/kl15rg/MLOps/train.py:130: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():  # Her bruges AMP
+Traceback (most recent call last):
+  File "/ceph/home/student.aau.dk/kl15rg/MLOps/train.py", line 212, in <module>
+    train_model(model, train_loader, val_loader, criterion, optimizer, epochs=10)
+  File "/ceph/home/student.aau.dk/kl15rg/MLOps/train.py", line 131, in train_model
+    outputs = model(inputs)
+  File "/ceph/home/student.aau.dk/kl15rg/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ceph/home/student.aau.dk/kl15rg/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ceph/home/student.aau.dk/kl15rg/MLOps/train.py", line 98, in forward
+    x = self.embedding(x)
+  File "/ceph/home/student.aau.dk/kl15rg/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ceph/home/student.aau.dk/kl15rg/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ceph/home/student.aau.dk/kl15rg/.local/lib/python3.10/site-packages/torch/nn/modules/sparse.py", line 190, in forward
+    return F.embedding(
+  File "/ceph/home/student.aau.dk/kl15rg/.local/lib/python3.10/site-packages/torch/nn/functional.py", line 2551, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu! (when checking argument for argument index in method wrapper_CUDA__index_select)
+Traceback (most recent call last):
+  File "/ceph/home/student.aau.dk/kl15rg/MLOps/train.py", line 212, in <module>
+    train_model(model, train_loader, val_loader, criterion, optimizer, epochs=10)
+  File "/ceph/home/student.aau.dk/kl15rg/MLOps/train.py", line 131, in train_model
+    outputs = model(inputs)
+  File "/ceph/home/student.aau.dk/kl15rg/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ceph/home/student.aau.dk/kl15rg/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ceph/home/student.aau.dk/kl15rg/MLOps/train.py", line 98, in forward
+    x = self.embedding(x)
+  File "/ceph/home/student.aau.dk/kl15rg/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ceph/home/student.aau.dk/kl15rg/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ceph/home/student.aau.dk/kl15rg/.local/lib/python3.10/site-packages/torch/nn/modules/sparse.py", line 190, in forward
+    return F.embedding(
+  File "/ceph/home/student.aau.dk/kl15rg/.local/lib/python3.10/site-packages/torch/nn/functional.py", line 2551, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu! (when checking argument for argument index in method wrapper_CUDA__index_select)

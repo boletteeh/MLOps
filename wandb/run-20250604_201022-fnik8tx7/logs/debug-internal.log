@@ -1,0 +1,15 @@
+{"time":"2025-06-04T20:10:23.38541978+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250604_201022-fnik8tx7/logs/debug-core.log"}
+{"time":"2025-06-04T20:10:23.725992241+02:00","level":"INFO","msg":"stream: created new stream","id":"fnik8tx7"}
+{"time":"2025-06-04T20:10:23.726083341+02:00","level":"INFO","msg":"stream: started","id":"fnik8tx7"}
+{"time":"2025-06-04T20:10:23.726152761+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"fnik8tx7"}
+{"time":"2025-06-04T20:10:23.726188819+02:00","level":"INFO","msg":"sender: started","stream_id":"fnik8tx7"}
+{"time":"2025-06-04T20:10:23.726236267+02:00","level":"INFO","msg":"handler: started","stream_id":"fnik8tx7"}
+{"time":"2025-06-04T20:10:24.041560613+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T20:10:28.829314885+02:00","level":"INFO","msg":"stream: closing","id":"fnik8tx7"}
+{"time":"2025-06-04T20:10:28.82935+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T20:10:28.829397429+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T20:10:29.793438406+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T20:10:30.044622295+02:00","level":"INFO","msg":"handler: closed","stream_id":"fnik8tx7"}
+{"time":"2025-06-04T20:10:30.044663562+02:00","level":"INFO","msg":"sender: closed","stream_id":"fnik8tx7"}
+{"time":"2025-06-04T20:10:30.044663772+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"fnik8tx7"}
+{"time":"2025-06-04T20:10:30.044744693+02:00","level":"INFO","msg":"stream: closed","id":"fnik8tx7"}

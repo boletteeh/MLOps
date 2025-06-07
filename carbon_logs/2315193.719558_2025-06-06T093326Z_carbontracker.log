@@ -1,0 +1,12 @@
+2025-06-06 09:33:26 - carbontracker version 2.2.0
+2025-06-06 09:33:26 - Only predicted and actual consumptions are multiplied by a PUE coefficient of 1.58 (Daniel Bizo, 2023, Uptime Institute Global Data Center Survey).
+2025-06-06 09:33:26 - The following components were found: GPU with device(s) NVIDIA L4. CPU with device(s) cpu:1, cpu:0.
+2025-06-06 09:33:26 - Monitoring thread started.
+2025-06-06 09:34:40 - Epoch 1:
+2025-06-06 09:34:40 - Duration: 0:01:14.01
+2025-06-06 09:34:40 - Average power usage (W) for gpu: 16.136243243243246
+2025-06-06 09:34:40 - Average power usage (W) for cpu: 0.0
+2025-06-06 09:34:40 - Live carbon intensity could not be fetched at detected location: Aalborg, North Denmark, DK. Defaulted to average carbon intensity for DK in 2023 of 151.65 gCO2/kWh. at detected location: Aalborg, North Denmark, DK.
+2025-06-06 09:34:40 - Carbon intensities (gCO2/kWh) fetched every 900 s at detected location Aalborg, North Denmark, DK: [151.6503]
+2025-06-06 09:34:40 - Average carbon intensity during training was 151.65 gCO2/kWh at detected location: Aalborg, North Denmark, DK.
+2025-06-06 09:34:40 - Monitoring thread ended.

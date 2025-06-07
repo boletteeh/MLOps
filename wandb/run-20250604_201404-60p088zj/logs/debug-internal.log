@@ -1,0 +1,17 @@
+{"time":"2025-06-04T20:14:04.982205711+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.0","symlink path":"/ceph/home/student.aau.dk/kl15rg/MLOps/wandb/run-20250604_201404-60p088zj/logs/debug-core.log"}
+{"time":"2025-06-04T20:14:05.43544947+02:00","level":"INFO","msg":"stream: created new stream","id":"60p088zj"}
+{"time":"2025-06-04T20:14:05.435536112+02:00","level":"INFO","msg":"stream: started","id":"60p088zj"}
+{"time":"2025-06-04T20:14:05.435587919+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"60p088zj"}
+{"time":"2025-06-04T20:14:05.435606734+02:00","level":"INFO","msg":"sender: started","stream_id":"60p088zj"}
+{"time":"2025-06-04T20:14:05.435599912+02:00","level":"INFO","msg":"handler: started","stream_id":"60p088zj"}
+{"time":"2025-06-04T20:14:05.808279806+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-04T20:14:11.443446872+02:00","level":"INFO","msg":"api: retrying HTTP error","status":503,"url":"https://api.wandb.ai/graphql","body":"{\"errors\":[{\"message\":\"The service is currently unavailable. Please try again later.\",\"path\":[\"createArtifact\"]}],\"data\":{\"createArtifact\":null}}"}
+{"time":"2025-06-04T20:14:19.838857079+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-04T20:14:19.838910689+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-04T20:14:20.842427326+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact sentiment_model","runtime_seconds":7.292775216,"subtasks":[{"desc":"best_model_rank1.pth","runtime_seconds":0.277546167,"progress":"1.1MB/2.3MB"}]}],"total_operations":1}}
+{"time":"2025-06-04T20:14:22.578585539+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-04T20:14:22.830182579+02:00","level":"INFO","msg":"stream: closing","id":"60p088zj"}
+{"time":"2025-06-04T20:14:22.830216473+02:00","level":"INFO","msg":"handler: closed","stream_id":"60p088zj"}
+{"time":"2025-06-04T20:14:22.830233003+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"60p088zj"}
+{"time":"2025-06-04T20:14:22.830256928+02:00","level":"INFO","msg":"sender: closed","stream_id":"60p088zj"}
+{"time":"2025-06-04T20:14:22.830323733+02:00","level":"INFO","msg":"stream: closed","id":"60p088zj"}

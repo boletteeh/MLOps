@@ -1,0 +1,24 @@
+/ceph/home/student.aau.dk/kl15rg/MLOps/train.py:130: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():  # Her bruges AMP
+Epoch [1/10], Train Loss: 1.4354
+Epoch [1/10], Validation Loss: 1.4489
+Best model saved with Validation Loss: 1.4489
+Epoch [2/10], Train Loss: 1.2891
+Epoch [2/10], Validation Loss: 1.4086
+Best model saved with Validation Loss: 1.4086
+Epoch [3/10], Train Loss: 1.2190
+Epoch [3/10], Validation Loss: 1.4528
+Epoch [4/10], Train Loss: 1.1349
+Epoch [4/10], Validation Loss: 1.5551
+Epoch [5/10], Train Loss: 1.0211
+Epoch [5/10], Validation Loss: 1.8427
+Epoch [6/10], Train Loss: 0.9105
+Epoch [6/10], Validation Loss: 1.7383
+Epoch [7/10], Train Loss: 0.8009
+Epoch [7/10], Validation Loss: 1.9174
+Epoch [8/10], Train Loss: 0.7298
+Epoch [8/10], Validation Loss: 2.0691
+Epoch [9/10], Train Loss: 0.6626
+Epoch [9/10], Validation Loss: 2.3118
+Epoch [10/10], Train Loss: 0.5321
+Epoch [10/10], Validation Loss: 2.8966

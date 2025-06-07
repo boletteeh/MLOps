@@ -1,0 +1,18 @@
+2025-06-05 20:53:08 - CarbonTracker: The following components were found: GPU with device(s) NVIDIA L4. CPU with device(s) cpu:1, cpu:0.
+2025-06-05 20:54:04 - CarbonTracker: Live carbon intensity could not be fetched at detected location: Aalborg, North Denmark, DK. Defaulted to average carbon intensity for DK in 2023 of 151.65 gCO2/kWh. at detected location: Aalborg, North Denmark, DK.
+2025-06-05 20:54:04 - CarbonTracker: 
+Predicted consumption for 1 epoch(s):
+	Time:	0:00:56
+	Energy:	0.000394239686 kWh
+	CO2eq:	0.059786566627 g
+	This is equivalent to:
+	0.000556154108 km travelled by car
+2025-06-05 20:54:04 - CarbonTracker: Average carbon intensity during training was 151.65 gCO2/kWh at detected location: Aalborg, North Denmark, DK.
+2025-06-05 20:54:04 - CarbonTracker: 
+Actual consumption for 1 epoch(s):
+	Time:	0:00:56
+	Energy:	0.000394239686 kWh
+	CO2eq:	0.059786566627 g
+	This is equivalent to:
+	0.000556154108 km travelled by car
+2025-06-05 20:54:04 - CarbonTracker: Finished monitoring.

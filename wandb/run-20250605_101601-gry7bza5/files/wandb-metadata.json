@@ -1,0 +1,76 @@
+{
+  "os": "Linux-5.15.0-139-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.10.12",
+  "startedAt": "2025-06-05T08:16:02.084511Z",
+  "program": "/ceph/home/student.aau.dk/kl15rg/MLOps/train_ddp.py",
+  "codePath": "train_ddp.py",
+  "git": {
+    "remote": "https://github.com/boletteeh/MLOps.git",
+    "commit": "3741177a79a8ee2878c068b3e0be9e2cf8e10db8"
+  },
+  "email": "sb15jr@student.aau.dk",
+  "root": "/ceph/home/student.aau.dk/kl15rg/MLOps",
+  "host": "ailab-l4-01",
+  "executable": "/usr/bin/python3",
+  "codePathLocal": "train_ddp.py",
+  "cpu_count": 64,
+  "cpu_count_logical": 128,
+  "disk": {
+    "/": {
+      "total": "67108864",
+      "used": "12288"
+    }
+  },
+  "memory": {
+    "total": "540795154432"
+  },
+  "cpu": {
+    "count": 64,
+    "countLogical": 128
+  },
+  "slurm": {
+    "cluster_name": "ailab",
+    "conf": "/etc/slurm/slurm.conf",
+    "cpus_on_node": "8",
+    "gpus_on_node": "2",
+    "gtids": "0",
+    "job_cpus_per_node": "8",
+    "job_gid": "238306",
+    "job_id": "141594",
+    "job_name": "singularity",
+    "job_nodelist": "ailab-l4-01",
+    "job_num_nodes": "1",
+    "job_partition": "l4",
+    "job_qos": "normal",
+    "job_uid": "238306",
+    "job_user": "kl15rg@student.aau.dk",
+    "jobid": "141594",
+    "launch_node_ipaddr": "172.21.131.130",
+    "localid": "0",
+    "nnodes": "1",
+    "nodeid": "0",
+    "nodelist": "ailab-l4-01",
+    "nprocs": "1",
+    "ntasks": "1",
+    "prio_process": "0",
+    "procid": "0",
+    "srun_comm_host": "172.21.131.130",
+    "srun_comm_port": "44539",
+    "step_gpus": "4,5",
+    "step_id": "0",
+    "step_launcher_port": "44539",
+    "step_nodelist": "ailab-l4-01",
+    "step_num_nodes": "1",
+    "step_num_tasks": "1",
+    "step_tasks_per_node": "1",
+    "stepid": "0",
+    "submit_dir": "/ceph/home/student.aau.dk/kl15rg/MLOps",
+    "submit_host": "ailab-fe01",
+    "task_pid": "1555648",
+    "tasks_per_node": "1",
+    "topology_addr": "ailab-l4-01",
+    "topology_addr_pattern": "node",
+    "umask": "0002",
+    "working_cluster": "ailab:ailab-ctl01:6817:9472:109"
+  }
+}

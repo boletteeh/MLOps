@@ -212,7 +212,7 @@ if __name__ == "__main__":
         embedding_dim=config['model']['embedding_dim'],
         hidden_dim=config['model']['hidden_dim'],
         output_dim=config['model']['output_dim'],
-        max_len=config[['data']['max_len'])
+        max_len=config['data']['max_len'])
 
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=config['training']['learning_rate'])

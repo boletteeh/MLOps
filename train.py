@@ -194,7 +194,7 @@ if __name__ == "__main__":
     train_data = index_dataset(train_data, word2idx)
     val_data = index_dataset(val_data, word2idx)
 
-    max_len = config['max_len']n
+    max_len = config['max_len']
     train_data = pad_dataset(train_data, max_len)
     val_data = pad_dataset(val_data, max_len)
 

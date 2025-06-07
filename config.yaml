@@ -13,6 +13,6 @@ model:
 
 training:
   epochs: 20
-  learning_rate: 1.001
+  learning_rate: 0.001
   class_weights: [1.0, 3.0, 3.0, 1.0, 1.0, 1.5, 1.0]
 

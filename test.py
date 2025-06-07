@@ -7,12 +7,15 @@ import matplotlib.pyplot as plt
 import torch.nn as nn
 from train import load_datasets, inspect_dataset, SentimentModel, preprocess_text, preprocess_dataset, build_word2idx, index_dataset, pad_sequence, pad_dataset, convert_to_tensors, train_model
 
-def evaluate_model(model, loader, criterion):
+def evaluate_model(model, loader, criterion, device):
     model.eval()
     total_correct = 0
     preds, labels = [], []
     with torch.no_grad():
         for inputs, targets in loader:
+            inputs = inputs.to(device)
+            targets = targets.to(device)
+            
             outputs = model(inputs)
             _, predicted = torch.max(outputs, 1)
             total_correct += (predicted == targets).sum().item()
@@ -26,6 +29,7 @@ def evaluate_model(model, loader, criterion):
 ## MAIN-FUNKTION ##
 
 def main():
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     # Load datasets
     train_data, val_data, test_data = load_datasets()
     inspect_dataset(train_data)
@@ -58,13 +62,13 @@ def main():
     test_loader = DataLoader(TensorDataset(X_test, y_test), batch_size=32, shuffle=False)
 
     # Initialize model, loss, and optimizer
-    model = SentimentModel(len(word2idx), 50, 50, 7, MAX_LEN)
-    class_weights = torch.tensor([1.0, 3.0, 3.0, 1.0, 1.0, 1.5, 1.0], dtype=torch.float)
+    model = SentimentModel(len(word2idx), 50, 50, 7, MAX_LEN).to(device)
+    class_weights = torch.tensor([1.0, 3.0, 3.0, 1.0, 1.0, 1.5, 1.0], dtype=torch.float).to(device)
     criterion = nn.CrossEntropyLoss(weight=class_weights)
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
     # Train model
-    train_losses = train_model(model, train_loader, val_loader, criterion, optimizer, epochs=15)
+    train_losses = train_model(model, train_loader, val_loader, criterion, optimizer, epochs=15, device=device)
 
     # Load the best model
     #model.load_state_dict(torch.load("best_model.pth"))
@@ -78,8 +82,8 @@ def main():
     run.finish()
 
     # Evaluate on validation and test data
-    val_acc, val_f1, _, _ = evaluate_model(model, val_loader, criterion)
-    test_acc, test_f1, test_preds, test_labels = evaluate_model(model, test_loader, criterion)
+    val_acc, val_f1, _, _ = evaluate_model(model, val_loader, criterion, device)
+    test_acc, test_f1, test_preds, test_labels = evaluate_model(model, test_loader, criterion, device)
 
     print(f"Validation Accuracy: {val_acc * 100:.2f}%, F1-Score: {val_f1:.4f}")
     print(f"Test Accuracy: {test_acc * 100:.2f}%, F1-Score: {test_f1:.4f}")

@@ -5,4 +5,6 @@ scikit-learn==1.5.2
 matplotlib==3.8.3
 wandb==0.20.0
 pytest==7.4.4
+dvc==3.51.0
+
 

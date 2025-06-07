@@ -8,7 +8,10 @@ import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
 import matplotlib.pyplot as plt
 import wandb
+import nltk
 nltk.download('punkt')
+from torch.cuda.amp import autocast, GradScaler
+
 
 
 wandb.init()
@@ -98,7 +101,7 @@ class SentimentModel(nn.Module):
         self.relu3 = nn.ReLU()
         self.conv4 = nn.Conv1d(128, 128, 5, padding=1)
         self.relu4 = nn.ReLU()
-        self.fc_out = nn.Linear(3840, output_dim)
+        self.fc_out = nn.Linear(7168, output_dim)
 
     def forward(self, x):
         x = self.embedding(x)
@@ -116,21 +119,39 @@ class SentimentModel(nn.Module):
 
 ## TRÆNING OG EVALUERING ##
 
-def train_model(model, train_loader, val_loader, criterion, optimizer, epochs,
-                checkpoint_path="best_model.pth"):
+def train_model(model, train_loader, val_loader, criterion, optimizer, epochs, device='cuda', checkpoint_path="best_model.pth"):
+    model.to(device)
+    scaler = GradScaler()
     best_val_loss = float('inf')
     train_losses = []
-    run = wandb.init(project="MLOps", job_type="train", reinit=True)                
+    
+    run = wandb.init(project="MLOps", job_type="train", reinit=True)   
+    
     for epoch in range(epochs):
         model.train()
         running_loss = 0.0
+        
         for inputs, labels in train_loader:
+            inputs = inputs.to(device)
+            labels = labels.to(device)
+            
             optimizer.zero_grad()
-            outputs = model(inputs)
-            loss = criterion(outputs, labels)
-            loss.backward()
-            optimizer.step()
+            
+            with autocast():  # Her bruges AMP
+                outputs = model(inputs)
+                loss = criterion(outputs, labels)
+                
+            # Backward Pass with AMP
+            scaler.scale(loss).backward()
+            scaler.step(optimizer)
+            scaler.update()
+            
+           #outputs = model(inputs)
+            #loss = criterion(outputs, labels)
+            #loss.backward()
+            #optimizer.step()
             running_loss += loss.item()
+            
         avg_loss = running_loss / len(train_loader)
         train_losses.append(avg_loss)
         print(f"Epoch [{epoch+1}/{epochs}], Train Loss: {avg_loss:.4f}")
@@ -141,6 +162,8 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, epochs,
         val_loss = 0.0
         with torch.no_grad():
             for inputs, labels in val_loader:
+                inputs = inputs.to(device)
+                labels = labels.to(device)
                 outputs = model(inputs)
                 loss = criterion(outputs, labels)
                 val_loss += loss.item()
@@ -161,3 +184,40 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, epochs,
     wandb.finish()
 
     return train_losses
+
+if __name__ == "__main__":
+    # Eksempel på lokal kørsel af træning, hvis du vil teste uden DDP
+    train_data, val_data, _ = load_datasets()
+    train_data = preprocess_dataset(train_data)
+    val_data = preprocess_dataset(val_data)
+
+    word2idx = build_word2idx()
+    train_data = index_dataset(train_data, word2idx)
+    val_data = index_dataset(val_data, word2idx)
+
+    max_len = 120
+    train_data = pad_dataset(train_data, max_len)
+    val_data = pad_dataset(val_data, max_len)
+
+    X_train, y_train = convert_to_tensors(train_data)
+    X_val, y_val = convert_to_tensors(val_data)
+
+    train_dataset = TensorDataset(X_train, y_train)
+    val_dataset = TensorDataset(X_val, y_val)
+
+    train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
+
+    model = SentimentModel(
+        vocab_size=len(word2idx),
+        embedding_dim=50,
+        hidden_dim=64,
+        output_dim=7,
+        max_len=max_len
+    )
+
+    criterion = nn.CrossEntropyLoss()
+    optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
+
+    train_model(model, train_loader, val_loader, criterion, optimizer, epochs=10)
+

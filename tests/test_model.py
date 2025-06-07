@@ -8,7 +8,8 @@ sys.path.insert(0, os.path.abspath(os.path.dirname(__file__) + "/.."))
 from train import SentimentModel  # Juster efter dit projekt
 
 # Indlæs config.yaml
-with open("config.yaml", "r") as f:
+config_path = os.path.join(os.path.dirname(__file__), "..", "config.yaml")
+with open(config_path, "r") as f:
     config = yaml.safe_load(f)
 
 VOCAB_SIZE = config["model"]["vocab_size"]

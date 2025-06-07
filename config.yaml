@@ -1,44 +1,18 @@
-import json
-import torch
+---
 
-# Gem konfiguration i en JSON-fil
-def save_config(config, filename="config.json"):
-    with open(filename, "w") as f:
-        json.dump(config, f, indent=4)
+    data:
+      train_path: "train_sent_emo.csv"
+      val_path: "val_sent_emo.csv"
+      test_path: "test_sent_emo.csv"
+      max_len: 69
+      batch_size: 32
 
-# Indlæs konfiguration fra en JSON-fil
-def load_config(filename="config.json"):
-    with open(filename, "r") as f:
-        return json.load(f)
+    model:
+      embedding_dim: 50
+      hidden_dim: 50
+      output_dim: 7
 
-# Eksempel på en konfigurationsfil
-config = {
-    "data": {
-        "train_path": "train_sent_emo.csv",
-        "val_path": "val_sent_emo.csv",
-        "test_path": "test_sent_emo.csv",
-        "max_len": 69,
-        "batch_size": 32
-    },
-    "model": {
-        "embedding_dim": 50,
-        "hidden_dim": 50,
-        "output_dim": 7
-    },
-    "training": {
-        "epochs": 15,
-        "learning_rate": 0.001,
-        "class_weights": [1.0, 3.0, 3.0, 1.0, 1.0, 1.5, 1.0]
-    }
-}
-
-# Gem konfigurationen
-save_config(config)
-
-# Indlæs konfigurationen
-defined_config = load_config()
-print("Loaded Configuration:", defined_config)
-
-# Eksempel på brug i træning
-learning_rate = defined_config["training"]["learning_rate"]
-class_weights = torch.tensor(defined_config["training"]["class_weights"], dtype=torch.float)
+    training:
+      epochs: 15
+      learning_rate: 0.001
+      class_weights: [1.0, 3.0, 3.0, 1.0, 1.0, 1.5, 1.0]

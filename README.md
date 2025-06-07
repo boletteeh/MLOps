@@ -53,17 +53,17 @@ dvc push
 
 # Installation
 1. Klon projektet:
-   
+
 - git clone https://github.com/boletteeh/MLOps.git
 
 - cd MLOps
 
 2. Installer afhængigheder:
-   
+
 - pip install -r Requirements.txt
 
 3. Download data og modeller med DVC:
-   
+
 - dvc pull
 
 # Versionsstyring med DVC

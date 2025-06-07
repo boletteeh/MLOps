@@ -194,7 +194,7 @@ if __name__ == "__main__":
     train_data = index_dataset(train_data, word2idx)
     val_data = index_dataset(val_data, word2idx)
 
-    max_len = config['max_len']
+    max_len = config['data']['max_len']
     train_data = pad_dataset(train_data, max_len)
     val_data = pad_dataset(val_data, max_len)
 
@@ -204,19 +204,19 @@ if __name__ == "__main__":
     train_dataset = TensorDataset(X_train, y_train)
     val_dataset = TensorDataset(X_val, y_val)
 
-    train_loader = DataLoader(train_dataset, batch_size=config['batch_size'], shuffle=True)
-    val_loader = DataLoader(val_dataset, batch_size=config['batch_size'], shuffle=False)
+    train_loader = DataLoader(train_dataset, batch_size=config['data']['batch_size'], shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=config['data']['batch_size'], shuffle=False)
 
     model = SentimentModel(
         vocab_size=len(word2idx),
-        embedding_dim=config['embedding_dim'],
-        hidden_dim=config['hidden_dim'],
-        output_dim=config['output_dim'],
-        max_len=config['max_len']
+        embedding_dim=config['model']['embedding_dim'],
+        hidden_dim=config['model']['hidden_dim'],
+        output_dim=config['model']['output_dim'],
+        max_len=config[['data']['max_len']
     )
 
     criterion = nn.CrossEntropyLoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=config['learning_rate'])
+    optimizer = torch.optim.Adam(model.parameters(), lr=config['training']['learning_rate'])
 
-    train_model(model, train_loader, val_loader, criterion, optimizer, epochs=config['epochs'])
+    train_model(model, train_loader, val_loader, criterion, optimizer, epochs=config['training']['epochs'])
 

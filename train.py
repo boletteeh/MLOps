@@ -186,7 +186,9 @@ if __name__ == "__main__":
     train_data = preprocess_dataset(train_data)
     val_data = preprocess_dataset(val_data)
 
+    token_lists = train_data['tokens'].tolist() + val_data['tokens'].tolist()
     word2idx = build_word2idx_from_tokens(token_lists)
+
     train_data = index_dataset(train_data, word2idx)
     val_data = index_dataset(val_data, word2idx)
 

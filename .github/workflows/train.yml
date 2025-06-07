@@ -1,0 +1,38 @@
+name: Test and Train on AI-Lab
+
+on:
+  push:
+    branches:
+      - main  # Kun på push/merge til main
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: Run unit tests
+        run: |
+          pytest tests/
+
+  train-on-ailab:
+    needs: run-tests  # Kør kun hvis run-tests lykkes
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Train model on AI-Lab
+        run: |
+          srun --gres=gpu:1 singularity exec --nv /ceph/container/pytorch/pytorch_24.09.sif python3 train.py

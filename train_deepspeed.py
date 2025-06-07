@@ -4,8 +4,25 @@ import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
 from train import (
     load_datasets, preprocess_dataset, build_word2idx, index_dataset,
-    pad_dataset, convert_to_tensors, SentimentModel, train_model
+    pad_dataset, convert_to_tensors, SentimentModel
 )
+
+def train_model(model, train_loader, val_loader, criterion, epochs, device):
+    model.train()
+    for epoch in range(epochs):
+        total_loss = 0
+        for inputs, labels in train_loader:
+            inputs, labels = inputs.to(device), labels.to(device)
+
+            outputs = model(inputs)
+            loss = criterion(outputs, labels)
+
+            model.backward(loss)       # <-- DeepSpeed-specifik
+            model.step()              # <-- DeepSpeed-specifik
+
+            total_loss += loss.item()
+
+        print(f"Epoch {epoch+1}/{epochs}, Loss: {total_loss:.4f}")
 
 def main():
     # Data
@@ -47,15 +64,12 @@ def main():
         config="ds_config.json"
     )
 
-    # Træning (du skal muligvis tilpasse train_model til DeepSpeed API)
     train_model(
         model=model_engine,
         train_loader=train_loader,
         val_loader=val_loader,
         criterion=nn.CrossEntropyLoss(),
-        optimizer=optimizer,
         epochs=10,
-        checkpoint_path="best_model_deepspeed.pth",
         device=model_engine.local_rank
     )
 

@@ -10,10 +10,14 @@ import wandb
 import nltk
 nltk.download('punkt')
 from torch.cuda.amp import autocast, GradScaler
+import os
+import yaml
 
- 
 
-wandb.init()
+# Indlæs config.yaml
+config_path = os.path.join(os.path.dirname(__file__), "..", "config.yaml")
+with open(config_path, "r") as f:
+    config = yaml.safe_load(f)
 
 ## DATAHÅNDTERING ##
 
@@ -190,7 +194,7 @@ if __name__ == "__main__":
     train_data = index_dataset(train_data, word2idx)
     val_data = index_dataset(val_data, word2idx)
 
-    max_len = 120
+    max_len = config['max_len']n
     train_data = pad_dataset(train_data, max_len)
     val_data = pad_dataset(val_data, max_len)
 
@@ -200,19 +204,19 @@ if __name__ == "__main__":
     train_dataset = TensorDataset(X_train, y_train)
     val_dataset = TensorDataset(X_val, y_val)
 
-    train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-    val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
+    train_loader = DataLoader(train_dataset, batch_size=config['batch_size'], shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=config['batch_size'], shuffle=False)
 
     model = SentimentModel(
         vocab_size=len(word2idx),
-        embedding_dim=50,
-        hidden_dim=64,
-        output_dim=7,
-        max_len=max_len
+        embedding_dim=config['embedding_dim'],
+        hidden_dim=config['hidden_dim'],
+        output_dim=config['output_dim'],
+        max_len=config['max_len']
     )
 
     criterion = nn.CrossEntropyLoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
+    optimizer = torch.optim.Adam(model.parameters(), lr=config['learning_rate'])
 
-    train_model(model, train_loader, val_loader, criterion, optimizer, epochs=10)
+    train_model(model, train_loader, val_loader, criterion, optimizer, epochs=config['epochs'])
 

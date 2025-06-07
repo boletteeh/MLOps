@@ -1,37 +1,31 @@
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.dirname(__file__) + "/.."))
-
+import yaml
 import torch
 import pytest
-from train import SentimentModel  # Juster importen efter din filstruktur
 
-# Opsæt testparametre
-VOCAB_SIZE = 1000
-EMBEDDING_DIM = 50
-HIDDEN_DIM = 128
-OUTPUT_DIM = 3
-MAX_LEN = 30
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__) + "/.."))
+from train import SentimentModel  # Juster efter dit projekt
+
+# Indlæs config.yaml
+with open("config.yaml", "r") as f:
+    config = yaml.safe_load(f)
+
+VOCAB_SIZE = config["model"]["vocab_size"]
+EMBEDDING_DIM = config["model"]["embedding_dim"]
+HIDDEN_DIM = config["model"]["hidden_dim"]
+OUTPUT_DIM = config["model"]["output_dim"]
+MAX_LEN = config["data"]["max_len"]
 
 # Opret en testmodel
 @pytest.fixture
 def model():
     return SentimentModel(VOCAB_SIZE, EMBEDDING_DIM, HIDDEN_DIM, OUTPUT_DIM, MAX_LEN)
 
-# Test modelinitialisering
 def test_model_initialization(model):
     assert isinstance(model, SentimentModel), "Modelen initialiseres ikke korrekt"
 
-# Test forward-metoden
-#def test_model_forward(model):
- #   sample_input = torch.randint(0, VOCAB_SIZE, (2, MAX_LEN), dtype=torch.long) # Simulerer batch med 2 sekvenser
-  #  output = model(sample_input)
-   # assert output.shape == (2, OUTPUT_DIM), "Modelens output har forkert form"
-
-# Test om modellen kan lave en fremadpassage uden fejl
-#def test_model_forward_pass_no_error(model):
- #   sample_input = torch.randint(0, VOCAB_SIZE, (4, MAX_LEN), dtype=torch.long)
-  #  try:
-   #     output = model(sample_input)
-    #except Exception as e:
-     #   pytest.fail(f"Modelen fejlede under forward pass: {e}")
+def test_model_forward(model):
+    sample_input = torch.randint(0, VOCAB_SIZE, (2, MAX_LEN), dtype=torch.long)
+    output = model(sample_input)
+    assert output.shape == (2, OUTPUT_DIM), "Modelens output har forkert form"

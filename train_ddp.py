@@ -5,6 +5,7 @@ import torch.distributed as dist
 from torch.utils.data import DataLoader, DistributedSampler, TensorDataset
 from torch.nn.parallel import DistributedDataParallel as DDP
 import wandb
+import time
 
 if torch.cuda.is_available():
     print(f"✅ CUDA is available! Number of GPUs: {torch.cuda.device_count()}")
@@ -81,6 +82,8 @@ def ddp_train(rank, world_size, epochs=10, batch_size=32):
     # Kun rank 0 skal logge til wandb
     if rank == 0:
         wandb.init(project="MLOps", job_type="ddp-train", reinit=True)
+        
+    start_time = time.time()
 
     train_model(
         model=model,
@@ -93,7 +96,10 @@ def ddp_train(rank, world_size, epochs=10, batch_size=32):
         device=rank
     )
 
+    end_time = time.time()
+
     if rank == 0:
+        print(f"Training time on rank {rank}: {end_time - start_time:.2f} seconds")
         wandb.finish()
 
     cleanup()
